@@ -75,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        StopAllCoroutines();
+
         //  Whenever touches a paltform can slash again.
         IsGrounded = true;
 
@@ -84,10 +86,9 @@ public class PlayerMovement : MonoBehaviour
     //  When touches a platform doesn't fall de inmediaty.
     IEnumerator Grab()
     {
-        StopAllCoroutines();
-
         //  Stops whet get to a platform.
         rb.velocity = Vector2.zero;
+        IsFalling = false;
 
         // Waits certain time to fall.
         yield return new WaitForSeconds(secondsGrab);
