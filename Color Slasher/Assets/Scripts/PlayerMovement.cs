@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     //  When touches a platform doesn't fall de inmediaty.
     IEnumerator Grab()
     {
-        //  Stops whet get to a platform.
+        //  Stops whet get to a platform and not IsFalling.
         rb.velocity = Vector2.zero;
         IsFalling = false;
 
