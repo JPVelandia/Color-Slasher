@@ -21,10 +21,13 @@ public class PlayerMovement : MonoBehaviour
 
         DirectionSlash = Vector2.zero;
 
+        IsDead = false;
         IsGrounded = false;
         IsFalling = true;
 
         DoubleSwipe = false;
+
+        PlayerLife.InCharacterDeath += TriggerDead;
     }
 
     void FixedUpdate()
@@ -39,9 +42,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //  Gets the position where the screen is last touched.
-        if((Input.GetButtonUp("Fire1")) && (IsGrounded || DoubleSwipe))
+        if((Input.GetButtonUp("Fire1")) && (IsGrounded || DoubleSwipe) && !IsDead)
         {
-            //  Let the character slash if isGrounded (or gets the DoubleSwipe bonus).
+            //  Let the character slash if IsGrounded (or gets the DoubleSwipe bonus) and not IsDead.
             Slash();
         }
     }
@@ -101,12 +104,18 @@ public class PlayerMovement : MonoBehaviour
 
         IsFalling = true;
 
-        //  vvv Uncomment this line to make Slash unable once stops Grab. vvv
+        //  vvv Uncomment this line to make Slash unable Grab ends. vvv
         //IsGrounded = false;
+    }
+
+    void TriggerDead()
+    {
+        IsDead = true;
     }
 
     public bool IsGrounded {get => canSwipe; set => canSwipe = value;}
     public bool IsFalling {get => falling; set => falling = value;}
+    public bool IsDead {get; set;}
     public bool DoubleSwipe {get => doubleSwipe; set => doubleSwipe = value;}
     Vector2 DirectionSlash {get; set;}
 }

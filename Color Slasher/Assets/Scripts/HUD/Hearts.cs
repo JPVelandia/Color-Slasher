@@ -5,25 +5,51 @@ using UnityEngine.UI;
 
 public class Hearts : MonoBehaviour
 {
-    Image[] hearts;
+    static Image[] hearts;
+
+    [SerializeField] GameObject restartBtn;
+    static GameObject restartBtnSt;
 
     void Awake()
     {
         hearts = GetComponentsInChildren<Image>();
 
-        
+        PlayerLife.InRefreshLife += RefreshHearts;
+        PlayerLife.InCharacterDeath += ToggleRestart;
+
+        //Starts with HUD deactivated.
+        restartBtnSt = restartBtn;
+        ToggleRestart(false);
+        TurnOffHearts();
     }
 
     void RefreshHearts(int hearts)
     {
-        foreach(Image heart in this.hearts)
+        TurnOffHearts();
+
+        //  Activate the number of hearts given.
+        for(int i = 0; i < hearts; i++)
+        {
+            Hearts.hearts[i].gameObject.SetActive(true);
+        }
+    }
+
+    void TurnOffHearts()
+    {
+        //  Deactivates al hearts.
+        foreach(Image heart in Hearts.hearts)
         {
             heart.gameObject.SetActive(false);
         }
+    }
 
-        for(int i = 0; i < hearts; i++)
-        {
-            this.hearts[i].gameObject.SetActive(true);
-        }
+    //  This function responses to PlayerLife's call, who is empty.
+    void ToggleRestart()
+    {
+        ToggleRestart(true);
+    }
+    void ToggleRestart(bool state)
+    {
+        restartBtnSt.SetActive(state);
     }
 }

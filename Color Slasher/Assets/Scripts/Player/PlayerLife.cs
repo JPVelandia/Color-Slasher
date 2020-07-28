@@ -1,14 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerLife : MonoBehaviour
 {
+    //  Jose was here
+    public static Action<int> InRefreshLife;
+    public static Action InCharacterDeath;
+
     [SerializeField] int startingHP = 3, currentHP;
 
     void Start()
     {
         currentHP = startingHP;
+        InRefreshLife(currentHP);
     }
     
     void Update()
@@ -31,7 +37,10 @@ public class PlayerLife : MonoBehaviour
         if(currentHP == 0)
         {
             Invoke("CharacterDeath", 3f);
+            InCharacterDeath();
         }
+
+        InRefreshLife(currentHP);
     }
     public void CharacterDeath()
     {
