@@ -39,11 +39,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //  Gets the position where the screen is last touched.
-        //  ACTIVATES SLASH
-        //  Let the character slash if isGrounded (or gets the DoubleSwipe bonus).
         if((Input.GetButtonUp("Fire1")) && (IsGrounded || DoubleSwipe))
         {
-            //StopAllCoroutines();
+            //  Let the character slash if isGrounded (or gets the DoubleSwipe bonus).
+            Slash();
+        }
+    }
+
+    void Slash()
+    {
+            //  Starts the slash without any other force.
+            rb.velocity = Vector2.zero;
+
             IsGrounded = false;
             IsFalling = false;
             finalPos = Input.mousePosition;
@@ -55,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
             //  Impulses this object in slash's direction.
             rb.AddForce(DirectionSlash * forceSwipe, ForceMode2D.Impulse);
-        }
     }
 
     int ActivateFriction()
@@ -75,25 +81,28 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        //  When touching a platform restart the Grab counter.
         StopAllCoroutines();
 
-        //  Whenever touches a paltform can slash again.
+        //  Whenever touches a paltform stops and can slash again.
+        rb.velocity = Vector2.zero;
         IsGrounded = true;
+        IsFalling = false;
 
-        StartCoroutine(Grab());
+        //  Activates Grab if the platform is not floor.
+        if(collision.contacts[0].normal != Vector2.up) StartCoroutine(Grab());
     }
 
     //  When touches a platform doesn't fall de inmediaty.
     IEnumerator Grab()
     {
-        //  Stops whet get to a platform and not IsFalling.
-        rb.velocity = Vector2.zero;
-        IsFalling = false;
-
         // Waits certain time to fall.
         yield return new WaitForSeconds(secondsGrab);
 
         IsFalling = true;
+
+        //  vvv Uncomment this line to make Slash unable once stops Grab. vvv
+        //IsGrounded = false;
     }
 
     public bool IsGrounded {get => canSwipe; set => canSwipe = value;}
