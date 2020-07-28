@@ -20,9 +20,21 @@ public class PlayerLife : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            currentHP -= 1;
-
-            //if()
+            LoseLife();
         }
+    }
+
+    public void LoseLife()
+    {
+        currentHP -= 1;
+
+        if(currentHP == 0)
+        {
+            Invoke("CharacterDeath", 3f);
+        }
+    }
+    public void CharacterDeath()
+    {
+        gameObject.SetActive(false);
     }
 }
