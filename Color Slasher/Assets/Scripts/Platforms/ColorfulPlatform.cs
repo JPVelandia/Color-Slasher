@@ -63,7 +63,7 @@ public class ColorfulPlatform : MonoBehaviour
     public void RandomNumber()
     {
         state = rnd.Next(1, 5);
-        Debug.Log(state);
+        //  ***Debug.Log(state);
         ChangeState();
     }
     public void ChangeState()
