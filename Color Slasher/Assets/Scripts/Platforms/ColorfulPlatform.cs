@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorfulPlatform : MonoBehaviour
+public class ColorfulPlatform : Platform
 {
     SpriteRenderer sr;
     System.Random rnd = new System.Random();
     [SerializeField] int state;
     bool blue = false, red = false, yellow = false, green = false;
 
+    protected override void AssignName()
+    {
+        gameObject.name = "Floor";
+    }
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         RandomNumber();
-    }
-
-    void Update()
-    {
-
     }
 
     public void BlueState()

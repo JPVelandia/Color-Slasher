@@ -1,50 +1,91 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-enum ColorMech { blue, red, yellow, green, white }
+public enum ColorMech { blue, red, yellow, green, white }
 
-public class ColorMechanic : MonoBehaviour
+[RequireComponent(typeof(PlayerMovement))]
+[RequireComponent(typeof(PlayerLife))]
+public class ColorMechanic : MonoBehaviour, ISubject
 {
+    #region Singleton
+
+    //  With this it won't be necessary to give a GameObject to PowerUpCharacter from Platform.
+
+    #endregion
+
     SpriteRenderer sr;
     ColorMech cm;
+    PlayerMovement playerMovement;
+    PlayerLife playerLife;
 
-    void Start()
+    void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerLife = GetComponent<PlayerLife>();
+
+        PlayerMovement.InDeactivatePower += QuitPower;
     }
 
-    void Update()
+    public void PowerUp(string platformName)
     {
+        QuitPower();
 
+        if(platformName == "Blue Platform")
+        {
+            BluePower();
+        }
+        else if (platformName == "Red Platform")
+        {
+            RedPower();
+        }
+        else if (platformName == "Yellow Platform")
+        {
+            YellowPower();
+        }
+        else if (platformName == "Green Platform")
+        {
+            GreenPower();
+        }
+        else if (platformName == "Floor")
+        {
+            QuitPower();
+        }
+
+        Notify();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void BluePower()
     {
-        if(collision.gameObject.name == "Blue Platform")
-        {
-            sr.color = Color.blue;
-            cm = ColorMech.blue;
-        }
-        if (collision.gameObject.name == "Red Platform")
-        {
-            sr.color = Color.red;
-            cm = ColorMech.red;
-        }
-        if (collision.gameObject.name == "Yellow Platform")
-        {
-            sr.color = Color.yellow;
-            cm = ColorMech.yellow;
-        }
-        if (collision.gameObject.name == "Green Platform")
-        {
-            sr.color = Color.green;
-            cm = ColorMech.green;
-        }
-        if (collision.gameObject.name == "Floor")
-        {
-            sr.color = Color.white;
-            cm = ColorMech.white;
-        }
+        sr.color = Color.blue;
+        cm = ColorMech.blue;
+    }
+    void GreenPower()
+    {
+        sr.color = Color.green;
+        cm = ColorMech.green;
+    }
+    void RedPower()
+    {
+        sr.color = Color.red;
+        cm = ColorMech.red;
+    }
+    void YellowPower()
+    {
+        sr.color = Color.yellow;
+        cm = ColorMech.yellow;
+    }
+    void QuitPower()
+    {
+        sr.color = Color.white;
+        cm = ColorMech.white;
+    }
+
+    public void Notify()
+    {
+        playerMovement.ColorMechUpdate(cm);
+        playerLife.ColorMechUpdate(cm);
     }
 }

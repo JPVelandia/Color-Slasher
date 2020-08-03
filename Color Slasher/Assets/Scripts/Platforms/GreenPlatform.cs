@@ -2,20 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreenPlatform : MonoBehaviour
+public class GreenPlatform : Platform
 {
-    private void Awake()
+    protected override void AssignName()
     {
         gameObject.name = "Green Platform";
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

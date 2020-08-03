@@ -2,20 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BluePlatform : MonoBehaviour
+public class BluePlatform : Platform
 {
-    private void Awake()
+    protected override void AssignName()
     {
         gameObject.name = "Blue Platform";
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

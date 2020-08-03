@@ -2,20 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedPlatform : MonoBehaviour
+public class RedPlatform : Platform
 {
-    private void Awake()
+    protected override void AssignName()
     {
         gameObject.name = "Red Platform";
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

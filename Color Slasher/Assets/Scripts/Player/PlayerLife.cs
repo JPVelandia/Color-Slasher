@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerLife : MonoBehaviour
+public class PlayerLife : MonoBehaviour, IObserver
 {
     //  Jose was here
     public static Action<int> InRefreshLife;
@@ -15,11 +15,6 @@ public class PlayerLife : MonoBehaviour
     {
         currentHP = startingHP;
         InRefreshLife(currentHP);
-    }
-    
-    void Update()
-    {
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,5 +40,36 @@ public class PlayerLife : MonoBehaviour
     public void CharacterDeath()
     {
         gameObject.SetActive(false);
+    }
+
+    public void ColorMechUpdate(ColorMech colorMech)
+    {
+        switch(colorMech)
+        {
+            case ColorMech.green:
+            ActivateGreenPower();
+            break;
+
+            case ColorMech.red:
+            ActivateRedPower();
+            break;
+
+            case ColorMech.white:
+            DeactivatePower();
+            break;
+        }
+    }
+
+    void ActivateGreenPower()
+    {
+
+    }
+    void ActivateRedPower()
+    {
+
+    }
+    void DeactivatePower()
+    {
+
     }
 }

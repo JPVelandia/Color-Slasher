@@ -1,22 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(ParticleSystem))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IObserver
 {
     //  Force applied to the slash movement | 
     //  Friction applied to the slash (contrary to DirectionSwipe) | 
     //  Seconds the character remains without falling when touches a platform.
-    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f;
+    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f, damage = 3f;
+    [SerializeField] bool canSwipe;
 
     //  Debug variables. Code works with Properties.
-    public bool canSwipe, onFloor, falling, doubleSwipe;
+    [SerializeField] bool onFloor, falling, doubleSwipe;
 
     Rigidbody2D rb;
     Vector3 startPos, finalPos;
     ParticleSystem particleSlash;
+
+    public static Action InDeactivatePower;
+    public static Action InEnemyKilled;
 
     void Awake()
     {
@@ -26,11 +31,10 @@ public class PlayerMovement : MonoBehaviour
         DirectionSlash = Vector2.zero;
 
         IsDead = false;
-        IsGrounded = false;
+        IsGrounded = true;
+        DoubleSwipe = false;
         IsStill = false;
         IsFalling = true;
-
-        DoubleSwipe = false;
 
         PlayerLife.InCharacterDeath += TriggerDead;
     }
@@ -75,20 +79,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Slash()
     {
-            //  Starts the slash without any other force.
-            rb.velocity = Vector2.zero;
+        //  Starts the slash without any other force.
+        rb.velocity = Vector2.zero;
 
-            IsGrounded = false;
-            IsStill = false;
-            IsFalling = false;
+        if(!IsGrounded) DeactivatePower();
+        IsGrounded = false;
+        IsStill = false;
+        IsFalling = false;
 
-            //  Impulses this object in slash's direction.
-            rb.AddForce(DirectionSlash * forceSlash, ForceMode2D.Impulse);
+        //  Impulses this object in slash's direction.
+        rb.AddForce(DirectionSlash * forceSlash, ForceMode2D.Impulse);
 
-            //  Activate particle system.
-            PlayParticlesSlash();
+        //  Activate particle system.
+        PlayParticlesSlash();
 
-            //  ***Debug.Log(DirectionSlash);
+        //  ***Debug.Log(DirectionSlash);
     }
 
     int ActivateFriction()
@@ -153,9 +158,43 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public bool IsGrounded {get => canSwipe; set => canSwipe = value;}
+    public bool DoubleSwipe {get => doubleSwipe; set => doubleSwipe = value;}
     public bool IsStill {get => onFloor; set => onFloor = value;}
     public bool IsFalling {get => falling; set => falling = value;}
     public bool IsDead {get; set;}
-    public bool DoubleSwipe {get => doubleSwipe; set => doubleSwipe = value;}
     Vector2 DirectionSlash {get; set;}
+
+    public void ColorMechUpdate(ColorMech colorMech)
+    {
+        switch(colorMech)
+        {
+            case ColorMech.blue:
+            ActivateBluePower();
+            break;
+
+            case ColorMech.yellow:
+            ActivateYellowPower();
+            break;
+
+            case ColorMech.white:
+            DeactivatePower();
+            break;
+        }
+    }
+
+    public void ActivateBluePower()
+    {
+        DoubleSwipe = true;
+    }
+    public void ActivateYellowPower()
+    {
+        damage = 6f;
+    }
+
+    public void DeactivatePower()
+    {
+        DoubleSwipe = false;
+        damage = 3f;
+        InDeactivatePower();
+    }
 }
