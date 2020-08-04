@@ -10,8 +10,9 @@ public class PlayerMovement : MonoBehaviour, IObserver
     //  Force applied to the slash movement | 
     //  Friction applied to the slash (contrary to DirectionSwipe) | 
     //  Seconds the character remains without falling when touches a platform.
-    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f, damage = 3f;
+    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f;
     [SerializeField] bool canSwipe;
+    public int damage = 3;
 
     //  Debug variables. Code works with Properties.
     [SerializeField] bool onFloor, falling, doubleSwipe;
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour, IObserver
         IsStill = false;
         IsFalling = true;
 
-        PlayerLife.InCharacterDeath += TriggerDead;
+        PlayerLife.InCharacterDied += TriggerDead;
     }
 
     void Update()
@@ -188,13 +189,13 @@ public class PlayerMovement : MonoBehaviour, IObserver
     }
     public void ActivateYellowPower()
     {
-        damage = 6f;
+        damage = 6;
     }
 
     public void DeactivatePower()
     {
         DoubleSwipe = false;
-        damage = 3f;
+        damage = 3;
         InDeactivatePower();
     }
 }

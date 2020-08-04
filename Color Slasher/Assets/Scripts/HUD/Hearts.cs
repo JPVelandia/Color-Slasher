@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Hearts : MonoBehaviour, ISubject
+public class Hearts : MonoBehaviour
 {
     static Image[] hearts;
 
     [SerializeField] GameObject restartBtn;
     static GameObject restartBtnSt;
 
-    Menu menu;
-
     void Awake()
     {
         hearts = GetComponentsInChildren<Image>();
 
         PlayerLife.InRefreshLife += RefreshHearts;
-        PlayerLife.InCharacterDeath += ToggleRestart;
+        PlayerLife.InCharacterDied += ToggleRestart;
 
         //Starts with HUD deactivated.
         restartBtnSt = restartBtn;
@@ -26,9 +24,7 @@ public class Hearts : MonoBehaviour, ISubject
     }
 
     void RefreshHearts(int hearts)
-    {
-        if(hearts <= 0) Notify();
-        
+    {        
         TurnOffHearts();
 
         //  Activate the number of hearts given.
@@ -55,10 +51,5 @@ public class Hearts : MonoBehaviour, ISubject
     void ToggleRestart(bool state)
     {
         restartBtnSt.SetActive(state);
-    }
-
-    public void Notify()
-    {
-        menu.SubjectUpdate();
     }
 }

@@ -33,7 +33,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
 
     #endregion
 
-    SpriteRenderer sr;
+    static SpriteRenderer sr;
     ColorMech cm;
     PlayerMovement playerMovement;
     PlayerLife playerLife;
@@ -50,6 +50,8 @@ public class ColorMechanic : MonoBehaviour, ISubject
 
     public void PowerUp(string platformName)
     {
+        if(sr == null) sr = GetComponent<SpriteRenderer>();
+
         QuitPower();
         Notify();
 

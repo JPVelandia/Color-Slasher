@@ -4771,7 +4771,7 @@ GameObject:
   - component: {fileID: 8300602974573118060}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4806,6 +4806,7 @@ MonoBehaviour:
   forceSlash: 10
   frictionSlash: 1
   secondsGrab: 2
+  damage: 1
   canSwipe: 0
   onFloor: 0
   falling: 0

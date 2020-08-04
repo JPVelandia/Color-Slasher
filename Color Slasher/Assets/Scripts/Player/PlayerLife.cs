@@ -3,42 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerLife : MonoBehaviour, IObserver
+public class PlayerLife : Character, IObserver
 {
     //  Jose was here
     public static Action<int> InRefreshLife;
-    public static Action InCharacterDeath;
+    public static Action InCharacterDied;
 
-    [SerializeField] int startingHP = 3, currentHP;
+    [SerializeField] int startingHP = 3;
 
     void Start()
     {
-        currentHP = startingHP;
-        InRefreshLife(currentHP);
+        life = startingHP;
+        InRefreshLife(life);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public override void TakeDamage(int damaged)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
-        {
-            LoseLife();
-        }
+        base.TakeDamage(damaged);
+
+        InRefreshLife(life);
     }
 
-    public void LoseLife()
+    protected override void TriggerIsDead()
     {
-        currentHP -= 1;
-
-        if(currentHP == 0)
-        {
-            Invoke("CharacterDeath", 3f);
-            InCharacterDeath();
-        }
-
-        InRefreshLife(currentHP);
+        Invoke("CharacterDeath", 3f);
+        InCharacterDied();
     }
     public void CharacterDeath()
     {
+        IsDead = true;
         gameObject.SetActive(false);
     }
 
