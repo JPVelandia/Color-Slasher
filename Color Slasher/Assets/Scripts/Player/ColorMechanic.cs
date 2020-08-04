@@ -12,6 +12,24 @@ public class ColorMechanic : MonoBehaviour, ISubject
     #region Singleton
 
     //  With this it won't be necessary to give a GameObject to PowerUpCharacter from Platform.
+    public static ColorMechanic instance;
+
+    public static ColorMechanic Instance {get => instance;}
+
+
+    void Awake()
+    {
+        //  Wheater there is already an instance...
+        if(instance != null) 
+        {
+            //  delete it and create a new one.
+            Destroy(instance);
+            instance = new ColorMechanic();
+        }
+        instance = this;
+
+        SetUp();
+    }
 
     #endregion
 
@@ -20,7 +38,8 @@ public class ColorMechanic : MonoBehaviour, ISubject
     PlayerMovement playerMovement;
     PlayerLife playerLife;
 
-    void Awake()
+    //  Get the references necessary to this code.
+    void SetUp()
     {
         sr = GetComponent<SpriteRenderer>();
         playerMovement = GetComponent<PlayerMovement>();
@@ -32,6 +51,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
     public void PowerUp(string platformName)
     {
         QuitPower();
+        Notify();
 
         if(platformName == "Blue Platform")
         {

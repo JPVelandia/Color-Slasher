@@ -15,12 +15,12 @@ public abstract class Platform : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player")) 
         {
-            PowerUpCharacter(other.gameObject);
+            PowerUpCharacter();
         }
     }
 
-    protected void PowerUpCharacter(GameObject character)
+    protected virtual void PowerUpCharacter()
     {
-        character.GetComponent<ColorMechanic>().PowerUp(name);
+        ColorMechanic.Instance.PowerUp(name);
     }
 }

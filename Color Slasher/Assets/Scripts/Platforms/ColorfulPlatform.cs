@@ -8,10 +8,13 @@ public class ColorfulPlatform : Platform
     System.Random rnd = new System.Random();
     [SerializeField] int state;
     bool blue = false, red = false, yellow = false, green = false;
+    bool TouchingPlayer{ get; set; }
 
     protected override void AssignName()
     {
         gameObject.name = "Floor";
+
+        TouchingPlayer = false;
     }
 
     void Start()
@@ -115,5 +118,18 @@ public class ColorfulPlatform : Platform
         {
             RandomNumber();
         }
+
+        if(TouchingPlayer) PowerUpCharacter();
+    }
+
+    protected override void PowerUpCharacter()
+    {
+        base.PowerUpCharacter();
+        TouchingPlayer = true;
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Player")) TouchingPlayer = false;
     }
 }
