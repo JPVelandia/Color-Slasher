@@ -35,6 +35,7 @@ void Awake()
         deployMenu = new CommDeployMenu(QueueMenuAssets());
 
         PlayerLife.InCharacterDied += Lose;
+        Finish.InWin += Win;
 
         winNloseTxt.gameObject.SetActive(false);
         Resume();
