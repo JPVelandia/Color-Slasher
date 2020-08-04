@@ -11,3 +11,8 @@ public interface ISubject
 {
     void Notify();
 }
+
+public interface IObserverHUD
+{
+    void SubjectUpdate();
+}

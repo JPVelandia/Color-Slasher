@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Hearts : MonoBehaviour
+public class Hearts : MonoBehaviour, ISubject
 {
     static Image[] hearts;
 
     [SerializeField] GameObject restartBtn;
     static GameObject restartBtnSt;
+
+    Menu menu;
 
     void Awake()
     {
@@ -25,6 +27,8 @@ public class Hearts : MonoBehaviour
 
     void RefreshHearts(int hearts)
     {
+        if(hearts <= 0) Notify();
+        
         TurnOffHearts();
 
         //  Activate the number of hearts given.
@@ -51,5 +55,10 @@ public class Hearts : MonoBehaviour
     void ToggleRestart(bool state)
     {
         restartBtnSt.SetActive(state);
+    }
+
+    public void Notify()
+    {
+        menu.SubjectUpdate();
     }
 }
