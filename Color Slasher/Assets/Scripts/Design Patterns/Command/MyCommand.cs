@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Command
+public interface MyCommand
 {
     void Execute();
     void Unexecute();

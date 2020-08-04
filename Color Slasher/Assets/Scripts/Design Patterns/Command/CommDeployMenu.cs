@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommDeployMenu : Command
+public class CommDeployMenu : MyCommand
 {
     static List<GameObject> menuAssets;
     public CommDeployMenu(List<GameObject> _menuAssets)

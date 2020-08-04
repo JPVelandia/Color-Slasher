@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Menu : MonoBehaviour
 {
     [SerializeField] Slider music, soundFX;
     [SerializeField] Button mainMenu, restart;
     [SerializeField] Button pause, resume;
+    [SerializeField] TextMeshProUGUI winNloseTxt;
 
     static Slider[] sliders = new Slider[2];
     static Button[] buttons = new Button[2];
     static Button[] pauses = new Button[2];
 
-    Command deployMenu;
+    static TextMeshProUGUI winNloseTxtS;
+
+    MyCommand deployMenu;
 
 void Awake()
     {
@@ -23,13 +27,16 @@ void Awake()
         buttons[0] = mainMenu;
         buttons[1] = restart;
 
+        pauses[0] = pause;
+        pauses[1] = resume;
+
+        winNloseTxtS = winNloseTxt;
+
         deployMenu = new CommDeployMenu(QueueMenuAssets());
 
         PlayerLife.InCharacterDied += Lose;
 
-        pauses[0] = pause;
-        pauses[1] = resume;
-
+        winNloseTxt.gameObject.SetActive(false);
         Resume();
     }
 
@@ -61,6 +68,9 @@ void Awake()
 
     public void Lose()
     {
+        winNloseTxt.gameObject.SetActive(true);
+        winNloseTxt.text = "You Lose!";
+        winNloseTxt.color = Color.red;
         pauses[0].gameObject.SetActive(false);
         deployMenu.Execute();
         Time.timeScale = 0;
@@ -68,6 +78,9 @@ void Awake()
 
     public void Win()
     {
+        winNloseTxt.gameObject.SetActive(true);
+        winNloseTxt.text = "You Win!";
+        winNloseTxt.color = Color.green;
         pauses[0].gameObject.SetActive(false);
         deployMenu.Execute();
     }

@@ -1095,6 +1095,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1212,11 +1213,11 @@ RectTransform:
   m_Father: {fileID: 1174394623}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 15.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 10, y: -50}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &789101038
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,6 +3087,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 136308847, guid: c82b002ff77e27b449f69132fb767436, type: 3}
+      propertyPath: winNloseTxt
+      value: 
+      objectReference: {fileID: 651435528}
+    - target: {fileID: 957348453570841726, guid: c82b002ff77e27b449f69132fb767436,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272631526040336035, guid: c82b002ff77e27b449f69132fb767436,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4290095494559736850, guid: c82b002ff77e27b449f69132fb767436,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3196,10 +3211,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: ----- UI -----
       objectReference: {fileID: 0}
+    - target: {fileID: 4412752182771070817, guid: c82b002ff77e27b449f69132fb767436,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6417192246985768466, guid: c82b002ff77e27b449f69132fb767436,
         type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980636279763962019, guid: c82b002ff77e27b449f69132fb767436,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c82b002ff77e27b449f69132fb767436, type: 3}
