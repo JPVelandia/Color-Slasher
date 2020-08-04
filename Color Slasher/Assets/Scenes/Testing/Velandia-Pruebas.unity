@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 61728947}
   - component: {fileID: 61728949}
   - component: {fileID: 61728948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 270822177}
   - component: {fileID: 270822179}
   - component: {fileID: 270822178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 364286850}
   - component: {fileID: 364286852}
   - component: {fileID: 364286851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 643784786}
   - component: {fileID: 643784788}
   - component: {fileID: 643784787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 650002410}
   - component: {fileID: 650002412}
   - component: {fileID: 650002411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1095,7 +1095,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1492,7 +1491,7 @@ GameObject:
   - component: {fileID: 1005090129}
   - component: {fileID: 1005090131}
   - component: {fileID: 1005090130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1600,7 +1599,7 @@ GameObject:
   - component: {fileID: 1034886774}
   - component: {fileID: 1034886776}
   - component: {fileID: 1034886775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1708,7 +1707,7 @@ GameObject:
   - component: {fileID: 1076981366}
   - component: {fileID: 1076981368}
   - component: {fileID: 1076981367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1827,7 @@ GameObject:
   - component: {fileID: 1482673608}
   - component: {fileID: 1482673610}
   - component: {fileID: 1482673609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1968,7 +1967,7 @@ GameObject:
   - component: {fileID: 1663359093}
   - component: {fileID: 1663359095}
   - component: {fileID: 1663359094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,7 +2075,7 @@ GameObject:
   - component: {fileID: 1683265179}
   - component: {fileID: 1683265181}
   - component: {fileID: 1683265180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2184,7 +2183,7 @@ GameObject:
   - component: {fileID: 1822008143}
   - component: {fileID: 1822008145}
   - component: {fileID: 1822008144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2292,7 +2291,7 @@ GameObject:
   - component: {fileID: 1844350559}
   - component: {fileID: 1844350561}
   - component: {fileID: 1844350560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2398,7 +2397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1990075797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ----- Floors -----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2446,7 +2445,7 @@ GameObject:
   - component: {fileID: 2022143332}
   - component: {fileID: 2022143334}
   - component: {fileID: 2022143333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2554,7 +2553,7 @@ GameObject:
   - component: {fileID: 2046547786}
   - component: {fileID: 2046547788}
   - component: {fileID: 2046547787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2745,7 +2744,7 @@ GameObject:
   - component: {fileID: 2102824705}
   - component: {fileID: 2102824707}
   - component: {fileID: 2102824706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3196,6 +3195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ----- UI -----
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417192246985768466, guid: c82b002ff77e27b449f69132fb767436,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c82b002ff77e27b449f69132fb767436, type: 3}
