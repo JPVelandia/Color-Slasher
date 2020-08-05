@@ -116,6 +116,7 @@ public class PlayerMovement : MonoBehaviour, IObserver
     {
         //  When touching a platform restart the Grab counter.
         StopAllCoroutines();
+        particleSlash.Stop();
 
         //  Check if the platform touched is floor.
         if(collision.contacts[0].normal == Vector2.up) IsStill = true;

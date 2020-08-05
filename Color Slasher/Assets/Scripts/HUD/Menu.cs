@@ -6,29 +6,28 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] Slider music, soundFX;
-    [SerializeField] Button mainMenu, restart;
-    [SerializeField] Button pause, resume;
+    [SerializeField] Button mainMenuBtn, restartBtn;
+    [SerializeField] Button pauseBtn, resumeBtn;
+    [SerializeField] Slider musicSld, soundFXSld;
     [SerializeField] TextMeshProUGUI winNloseTxt;
 
-    static Slider[] sliders = new Slider[2];
     static Button[] buttons = new Button[2];
     static Button[] pauses = new Button[2];
-
+    static Slider[] sliders = new Slider[2];
     static TextMeshProUGUI winNloseTxtS;
 
     MyCommand deployMenu;
 
 void Awake()
     {
-        sliders[0] = music;
-        sliders[1] = soundFX;
+        sliders[0] = musicSld;
+        sliders[1] = soundFXSld;
 
-        buttons[0] = mainMenu;
-        buttons[1] = restart;
+        buttons[0] = mainMenuBtn;
+        buttons[1] = restartBtn;
 
-        pauses[0] = pause;
-        pauses[1] = resume;
+        pauses[0] = pauseBtn;
+        pauses[1] = resumeBtn;
 
         winNloseTxtS = winNloseTxt;
 
@@ -69,9 +68,12 @@ void Awake()
 
     public void Lose()
     {
-        winNloseTxt.gameObject.SetActive(true);
-        winNloseTxt.text = "You Lose!";
-        winNloseTxt.color = Color.red;
+        if(winNloseTxtS != null)
+        {
+            winNloseTxtS.gameObject.SetActive(true);
+            winNloseTxtS.text = "You Lose!";
+            winNloseTxtS.color = Color.red;
+        }
         pauses[0].gameObject.SetActive(false);
         deployMenu.Execute();
         Time.timeScale = 0;
@@ -79,9 +81,12 @@ void Awake()
 
     public void Win()
     {
-        winNloseTxt.gameObject.SetActive(true);
-        winNloseTxt.text = "You Win!";
-        winNloseTxt.color = Color.green;
+        if(winNloseTxtS != null)
+        {
+            winNloseTxtS.gameObject.SetActive(true);
+            winNloseTxtS.text = "You Win!";
+            winNloseTxtS.color = Color.green;
+        }
         pauses[0].gameObject.SetActive(false);
         deployMenu.Execute();
     }

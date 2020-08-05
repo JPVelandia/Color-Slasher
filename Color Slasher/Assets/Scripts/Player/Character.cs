@@ -7,7 +7,7 @@ public abstract class Character : MonoBehaviour
     public int life;
     protected bool IsDead{get;set;}
 
-    void Awake()
+    protected virtual void Awake()
     {
         IsDead = false;
     }
