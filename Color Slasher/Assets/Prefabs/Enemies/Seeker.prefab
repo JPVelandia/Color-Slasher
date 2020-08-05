@@ -41,7 +41,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1613111300}
   serializedVersion: 6
   lengthInSec: 0.5
-  simulationSpeed: 1
+  simulationSpeed: 2
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -4770,7 +4770,7 @@ GameObject:
   - component: {fileID: 3456683318445067274}
   - component: {fileID: 1842112056}
   m_Layer: 0
-  m_Name: Tongue
+  m_Name: Seeker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4959,3 +4959,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   damage: 1
+  killCam: 1

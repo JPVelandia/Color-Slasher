@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Tongue : EAttackDirect
 {
+    [Header("Slow motion when kills this enemy")]
+    public bool killCam = true;
+
     Character player;
     ParticleSystem deathParticle;
 
@@ -33,7 +36,7 @@ public class Tongue : EAttackDirect
 
     protected override void TriggerIsDead()
     {
-        Time.timeScale = 0.5f;
+        if(killCam) Time.timeScale = 0.5f;
         deathParticle.Play();
         Invoke("TotalDeath", deathParticle.main.duration);
     }
