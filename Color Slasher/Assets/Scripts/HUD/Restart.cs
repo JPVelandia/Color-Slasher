@@ -7,6 +7,8 @@ public class Restart : MonoBehaviour
 {
     public void RestartActiveScene()
     {
+        DamageIndicators.UnsuscribeEvents();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

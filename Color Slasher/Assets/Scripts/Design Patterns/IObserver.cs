@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IObserver
+public interface IObserverColor
 {
     void ColorMechUpdate(ColorMech colorMech);
 }

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerLife : Character, IObserver
+public class PlayerLife : Character, IObserverColor
 {
     //  Jose was here
+    //public delegate void Life(int currentLife);
+    //public static event Life InRefreshLife;
     public static Action<int> InRefreshLife;
     public static Action InCharacterDied;
 

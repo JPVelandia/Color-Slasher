@@ -5,7 +5,7 @@ using System;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(ParticleSystem))]
-public class PlayerMovement : MonoBehaviour, IObserver
+public class PlayerMovement : MonoBehaviour, IObserverColor
 {
     //  Force applied to the slash movement | 
     //  Friction applied to the slash (contrary to DirectionSwipe) | 
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour, IObserver
     Vector3 startPos, finalPos;
     ParticleSystem particleSlash;
 
-    public static Action InDeactivatePower;
+    public static Action<string> InDeactivatePower;
     public static Action InEnemyKilled;
 
     void Awake()
@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour, IObserver
         DoubleSwipe = false;
         IsStill = false;
         IsFalling = true;
+
+        PlayerLife.InCharacterDied -= TriggerDead;
 
         PlayerLife.InCharacterDied += TriggerDead;
     }
@@ -83,7 +85,7 @@ public class PlayerMovement : MonoBehaviour, IObserver
         //  Starts the slash without any other force.
         rb.velocity = Vector2.zero;
 
-        if(!IsGrounded) DeactivatePower();
+        if(!IsGrounded) InDeactivatePower("Floor");
         IsGrounded = false;
         IsStill = false;
         IsFalling = false;
@@ -197,6 +199,5 @@ public class PlayerMovement : MonoBehaviour, IObserver
     {
         DoubleSwipe = false;
         damage = 3;
-        InDeactivatePower();
     }
 }
