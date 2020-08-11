@@ -32,6 +32,7 @@ public class Aimer : MonoBehaviour
             else
             {
                 player = FindObjectOfType<PlayerMovement>().gameObject.transform;
+                
             }
         }
     }
