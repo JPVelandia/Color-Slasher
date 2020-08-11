@@ -7,15 +7,14 @@ public enum ColorMech { blue, red, yellow, green, white }
 
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerLife))]
+
 public class ColorMechanic : MonoBehaviour, ISubject
 {
     #region Singleton
 
     //  With this it won't be necessary to give a GameObject to PowerUpCharacter from Platform.
     public static ColorMechanic instance;
-
     public static ColorMechanic Instance {get => instance;}
-
 
     void Awake()
     {
@@ -30,7 +29,6 @@ public class ColorMechanic : MonoBehaviour, ISubject
 
         SetUp();
     }
-
     #endregion
 
     SpriteRenderer sr;
