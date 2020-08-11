@@ -3,28 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Hearts : MonoBehaviour
+public class Hearts : MonoBehaviour, IObserverColor
 {
     static Image[] hearts;
-
-    [SerializeField] GameObject restartBtn;
-    static GameObject restartBtnSt;
 
     void Awake()
     {
         hearts = GetComponentsInChildren<Image>();
 
-        PlayerLife.InRefreshLife += RefreshHearts;
-        PlayerLife.InCharacterDeath += ToggleRestart;
+        PlayerLife.InRefreshLife -= RefreshHearts;
 
-        //Starts with HUD deactivated.
-        restartBtnSt = restartBtn;
-        ToggleRestart(false);
+        PlayerLife.InRefreshLife += RefreshHearts;
+
         TurnOffHearts();
     }
 
     void RefreshHearts(int hearts)
-    {
+    {        
         TurnOffHearts();
 
         //  Activate the number of hearts given.
@@ -43,13 +38,36 @@ public class Hearts : MonoBehaviour
         }
     }
 
-    //  This function responses to PlayerLife's call, who is empty.
-    void ToggleRestart()
+    public void ColorMechUpdate(ColorMech color)
     {
-        ToggleRestart(true);
-    }
-    void ToggleRestart(bool state)
-    {
-        restartBtnSt.SetActive(state);
+        Color newColor = new Color();
+
+        switch(color)
+        {
+            case ColorMech.blue:
+            newColor = Color.blue;
+            break;
+
+            case ColorMech.green:
+            newColor = Color.green;
+            break;
+
+            case ColorMech.red:
+            newColor = Color.red;
+            break;
+
+            case ColorMech.yellow:
+            newColor = Color.yellow;
+            break;
+
+            case ColorMech.white:
+            newColor = Color.white;
+            break;
+        }
+
+        foreach(Image heart in Hearts.hearts)
+        {
+            heart.color = newColor;
+        }
     }
 }

@@ -31,10 +31,12 @@ public class ColorMechanic : MonoBehaviour, ISubject
     }
     #endregion
 
-    SpriteRenderer sr;
+    static SpriteRenderer sr;
     ColorMech cm;
     PlayerMovement playerMovement;
     PlayerLife playerLife;
+    Hearts heartsHUD;
+    Swords swordsHUD;
 
     //  Get the references necessary to this code.
     void SetUp()
@@ -43,11 +45,16 @@ public class ColorMechanic : MonoBehaviour, ISubject
         playerMovement = GetComponent<PlayerMovement>();
         playerLife = GetComponent<PlayerLife>();
 
-        PlayerMovement.InDeactivatePower += QuitPower;
+        heartsHUD = FindObjectOfType<Hearts>();
+        swordsHUD = FindObjectOfType<Swords>();
+
+        PlayerMovement.InDeactivatePower += PowerUp;
     }
 
     public void PowerUp(string platformName)
     {
+        if(sr == null) sr = GetComponent<SpriteRenderer>();
+
         QuitPower();
         Notify();
 
@@ -105,5 +112,8 @@ public class ColorMechanic : MonoBehaviour, ISubject
     {
         playerMovement.ColorMechUpdate(cm);
         playerLife.ColorMechUpdate(cm);
+
+        heartsHUD.ColorMechUpdate(cm);
+        swordsHUD.ColorMechUpdate(cm);
     }
 }
