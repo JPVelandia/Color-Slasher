@@ -7,7 +7,8 @@ public class Aimer : MonoBehaviour
     Transform player, myTransform;
     [SerializeField] GameObject bullet;
     [SerializeField] float time = 0.5f;
-    bool k = true;
+    [SerializeField] bool k = true;
+    private bool ShootPermit { get; set; }
 
     private void Awake()
     {
@@ -15,25 +16,47 @@ public class Aimer : MonoBehaviour
         myTransform = GetComponent<Transform>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
+    {
+        if(ShootPermit == true)
+        {
+            myTransform.LookAt(player, Vector3.forward);
+            if (k == true)
+            {
+                Shoot();
+                k = false;
+                Invoke("KTrue", time);
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        myTransform.rotation *= Quaternion.Euler(0, 0, 1);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if(player != null)
+            if (player != null)
             {
-                myTransform.LookAt(player, Vector3.forward);
-                if(k == true)
-                {
-                    Shoot();
-                    k = false;
-                    Invoke("KTrue", time);
-                }
+                ShootPermit = true;
             }
             else
             {
                 player = FindObjectOfType<PlayerMovement>().gameObject.transform;
-                
+                ShootPermit = true;
+
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            ShootPermit = false;
         }
     }
 

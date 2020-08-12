@@ -7,11 +7,6 @@ public class Bullet : MonoBehaviour
     Rigidbody2D bullet;
     GameObject player;
     float deathTime = 6f;
-    
-    void Start()
-    {
-        
-    }
 
     private void Awake()
     {
