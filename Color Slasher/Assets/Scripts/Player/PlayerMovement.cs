@@ -116,12 +116,15 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        //Play Collision Audio
+
+
         //  When touching a platform restart the Grab counter.
         StopAllCoroutines();
         particleSlash.Stop();
 
         //  Check if the platform touched is floor.
-        if(collision.contacts[0].normal == Vector2.up) IsStill = true;
+        if (collision.contacts[0].normal == Vector2.up) IsStill = true;
 
         //  Whenever touches a paltform stops and can slash again.
         rb.velocity = Vector2.zero;
@@ -129,7 +132,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         IsFalling = false;
 
         //  Activates Grab if the character not IsStill.
-        if(!IsStill) StartCoroutine(Grab());
+        if (!IsStill) StartCoroutine(Grab());
     }
 
     //  When touches a platform doesn't fall de inmediaty.
@@ -166,7 +169,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     public bool IsStill {get => onFloor; set => onFloor = value;}
     public bool IsFalling {get => falling; set => falling = value;}
     public bool IsDead {get; set;}
-    Vector2 DirectionSlash {get; set;}
+    Vector2 DirectionSlash {get; set;} 
 
     public void ColorMechUpdate(ColorMech colorMech)
     {
