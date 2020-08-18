@@ -14,5 +14,5 @@ public class Sound
     [Range(0f, 1f)]
     public float pitch;
 
-    public AudioSource source;
+   public AudioSource source;
 }

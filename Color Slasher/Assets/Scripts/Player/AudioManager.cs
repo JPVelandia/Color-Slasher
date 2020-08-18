@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
+    public Sound[] sounds;  
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Play(string name)
+    public void Play(string name)
     {
         Sound s = Array.Find(sounds, sounds => sounds.name == name);
         s.source.Play();
