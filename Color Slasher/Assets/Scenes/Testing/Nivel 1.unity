@@ -2793,12 +2793,12 @@ PrefabInstance:
     - target: {fileID: 8300602974573118063, guid: 1f363056b2173cb4684f57cebc01bd22,
         type: 3}
       propertyPath: forceSlash
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8300602974573118063, guid: 1f363056b2173cb4684f57cebc01bd22,
         type: 3}
       propertyPath: frictionSlash
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f363056b2173cb4684f57cebc01bd22, type: 3}
