@@ -5,13 +5,14 @@ using System;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(ParticleSystem))]
-public class PlayerMovement : MonoBehaviour, IObserver
+public class PlayerMovement : MonoBehaviour, IObserverColor
 {
     //  Force applied to the slash movement | 
     //  Friction applied to the slash (contrary to DirectionSwipe) | 
     //  Seconds the character remains without falling when touches a platform.
-    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f, damage = 3f;
+    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f;
     [SerializeField] bool canSwipe;
+    public int damage = 3;
 
     //  Debug variables. Code works with Properties.
     [SerializeField] bool onFloor, falling, doubleSwipe;
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour, IObserver
     Vector3 startPos, finalPos;
     ParticleSystem particleSlash;
 
-    public static Action InDeactivatePower;
+    public static Action<string> InDeactivatePower;
     public static Action InEnemyKilled;
 
     void Awake()
@@ -36,7 +37,9 @@ public class PlayerMovement : MonoBehaviour, IObserver
         IsStill = false;
         IsFalling = true;
 
-        PlayerLife.InCharacterDeath += TriggerDead;
+        PlayerLife.InCharacterDied -= TriggerDead;
+
+        PlayerLife.InCharacterDied += TriggerDead;
     }
 
     void Update()
@@ -82,7 +85,7 @@ public class PlayerMovement : MonoBehaviour, IObserver
         //  Starts the slash without any other force.
         rb.velocity = Vector2.zero;
 
-        if(!IsGrounded) DeactivatePower();
+        if(!IsGrounded) InDeactivatePower("Floor");
         IsGrounded = false;
         IsStill = false;
         IsFalling = false;
@@ -115,6 +118,7 @@ public class PlayerMovement : MonoBehaviour, IObserver
     {
         //  When touching a platform restart the Grab counter.
         StopAllCoroutines();
+        particleSlash.Stop();
 
         //  Check if the platform touched is floor.
         if(collision.contacts[0].normal == Vector2.up) IsStill = true;
@@ -188,13 +192,12 @@ public class PlayerMovement : MonoBehaviour, IObserver
     }
     public void ActivateYellowPower()
     {
-        damage = 6f;
+        damage = 6;
     }
 
     public void DeactivatePower()
     {
         DoubleSwipe = false;
-        damage = 3f;
-        InDeactivatePower();
+        damage = 3;
     }
 }

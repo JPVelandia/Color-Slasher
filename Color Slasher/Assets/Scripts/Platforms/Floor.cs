@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Floor : MonoBehaviour
+public class Floor : Platform
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void AssignName()
     {
         gameObject.name = "Floor";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

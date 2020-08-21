@@ -7,15 +7,14 @@ public enum ColorMech { blue, red, yellow, green, white }
 
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerLife))]
+
 public class ColorMechanic : MonoBehaviour, ISubject
 {
     #region Singleton
 
     //  With this it won't be necessary to give a GameObject to PowerUpCharacter from Platform.
     public static ColorMechanic instance;
-
     public static ColorMechanic Instance {get => instance;}
-
 
     void Awake()
     {
@@ -30,13 +29,14 @@ public class ColorMechanic : MonoBehaviour, ISubject
 
         SetUp();
     }
-
     #endregion
 
-    SpriteRenderer sr;
+    static SpriteRenderer sr;
     ColorMech cm;
     PlayerMovement playerMovement;
     PlayerLife playerLife;
+    Hearts heartsHUD;
+    Swords swordsHUD;
 
     //  Get the references necessary to this code.
     void SetUp()
@@ -45,11 +45,16 @@ public class ColorMechanic : MonoBehaviour, ISubject
         playerMovement = GetComponent<PlayerMovement>();
         playerLife = GetComponent<PlayerLife>();
 
-        PlayerMovement.InDeactivatePower += QuitPower;
+        heartsHUD = FindObjectOfType<Hearts>();
+        swordsHUD = FindObjectOfType<Swords>();
+
+        PlayerMovement.InDeactivatePower += PowerUp;
     }
 
     public void PowerUp(string platformName)
     {
+        if(sr == null) sr = GetComponent<SpriteRenderer>();
+
         QuitPower();
         Notify();
 
@@ -107,5 +112,8 @@ public class ColorMechanic : MonoBehaviour, ISubject
     {
         playerMovement.ColorMechUpdate(cm);
         playerLife.ColorMechUpdate(cm);
+
+        heartsHUD.ColorMechUpdate(cm);
+        swordsHUD.ColorMechUpdate(cm);
     }
 }
