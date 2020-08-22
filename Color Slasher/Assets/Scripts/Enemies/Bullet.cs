@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    //Se han comentado varias líneas de código que incluyen "destroyThisObject" por destruir al enemigo sin ser tocado
+    //Por ahora el enemigo no dispara
+    //El prefab del enemigo ahora es kinetico en vez de dinámico para evitar que se caiga del nivel
     Rigidbody2D bullet;
     GameObject player;
     float deathTime = 6f;
@@ -11,7 +14,7 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         bullet = GetComponent<Rigidbody2D>();
-        DestroyThisObject(deathTime);
+        //DestroyThisObject(deathTime);
     }
 
     void FixedUpdate()
@@ -33,7 +36,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            DestroyThisObject(0f);
+            //DestroyThisObject(0f);
         }
     }
 

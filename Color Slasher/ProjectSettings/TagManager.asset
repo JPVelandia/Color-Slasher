@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - PurpleButtom
+  - Room
+  - Green
   layers:
   - Default
   - TransparentFX
