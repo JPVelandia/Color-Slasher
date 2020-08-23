@@ -63,6 +63,10 @@ public class Hearts : MonoBehaviour, IObserverColor
             case ColorMech.white:
             newColor = Color.white;
             break;
+
+            case ColorMech.black:
+            newColor = Color.white;
+            break;
         }
 
         foreach(Image heart in Hearts.hearts)

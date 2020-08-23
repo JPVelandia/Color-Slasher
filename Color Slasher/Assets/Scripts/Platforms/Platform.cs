@@ -4,11 +4,16 @@ using UnityEngine;
 
 public abstract class Platform : MonoBehaviour
 {
+    protected SpriteRenderer sr;
     protected abstract void AssignName();
+    protected abstract void AssignColor();
 
     void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
+
         AssignName();
+        AssignColor();
     }
 
     void OnCollisionEnter2D(Collision2D other)

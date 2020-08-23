@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum ColorMech { blue, red, yellow, green, white }
+public enum ColorMech { blue, red, yellow, green, white, black }
 
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerLife))]
@@ -74,6 +74,10 @@ public class ColorMechanic : MonoBehaviour, ISubject
         {
             GreenPower();
         }
+        else if (platformName == "Black Platform")
+        {
+            BlackPower();
+        }
         else if (platformName == "Floor")
         {
             QuitPower();
@@ -101,6 +105,11 @@ public class ColorMechanic : MonoBehaviour, ISubject
     {
         sr.color = Color.yellow;
         cm = ColorMech.yellow;
+    }
+    void BlackPower()
+    {
+        sr.color = Color.white;
+        cm = ColorMech.black;
     }
     void QuitPower()
     {

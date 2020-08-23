@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ColorfulPlatform : Platform
 {
-    SpriteRenderer sr;
     System.Random rnd = new System.Random();
     [SerializeField] int state;
     bool blue = false, red = false, yellow = false, green = false;
@@ -19,7 +18,6 @@ public class ColorfulPlatform : Platform
 
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
         RandomNumber();
     }
 
@@ -131,5 +129,10 @@ public class ColorfulPlatform : Platform
     void OnCollisionExit2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("Player")) TouchingPlayer = false;
+    }
+
+    protected override void AssignColor()
+    {
+        
     }
 }

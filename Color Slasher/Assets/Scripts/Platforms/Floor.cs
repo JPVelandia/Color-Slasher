@@ -8,4 +8,8 @@ public class Floor : Platform
     {
         gameObject.name = "Floor";
     }
+    protected override void AssignColor()
+    {
+        sr.color = Color.white;
+    }
 }
