@@ -9,7 +9,6 @@ public class Tongue : EAttackDirect
 
     Character player;
     ParticleSystem deathParticle;
-    public int count = 0;
 
     protected override void Awake()
     {
