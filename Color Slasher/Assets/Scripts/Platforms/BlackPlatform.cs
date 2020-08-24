@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedPlatform : Platform
+public class BlackPlatform : Platform
 {
     protected override void AssignName()
     {
-        gameObject.name = "Red Platform";
+        gameObject.name = "Black Platform";
     }
     protected override void AssignColor()
     {
-        sr.color = Color.red;
+        sr.color = Color.black;
     }
 }

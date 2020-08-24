@@ -49,6 +49,10 @@ public class PlayerLife : Character, IObserverColor
             ActivateRedPower();
             break;
 
+            case ColorMech.black:
+            TakeDamage(1);
+            break;
+
             case ColorMech.white:
             DeactivatePower();
             break;

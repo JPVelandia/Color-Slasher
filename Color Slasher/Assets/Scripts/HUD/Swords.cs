@@ -53,6 +53,11 @@ public class Swords : MonoBehaviour, IObserverColor
             newColor = Color.white;
             swordIndex = 4;
             break;
+
+            case ColorMech.black:
+            newColor = Color.white;
+            swordIndex = 4;
+            break;
         }
 
         currentSword.sprite = swords[swordIndex];

@@ -8,4 +8,8 @@ public class BluePlatform : Platform
     {
         gameObject.name = "Blue Platform";
     }
+    protected override void AssignColor()
+    {
+        sr.color = Color.blue;
+    }
 }
