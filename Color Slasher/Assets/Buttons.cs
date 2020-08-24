@@ -41,7 +41,7 @@ public class Buttons : MonoBehaviour
 
     IEnumerator GreenCount()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.3f);
         GreenWall.SetActive(true);
     }
 

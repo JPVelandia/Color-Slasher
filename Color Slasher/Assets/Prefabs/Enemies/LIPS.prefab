@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 217349823846774256, guid: 2d5f72ead9f65414f9cb55af74639894, type: 3}
-  time: 1
+  time: 3
   k: 1
 --- !u!58 &6667085274387897252
 CircleCollider2D:
@@ -136,7 +136,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 15.512367
+  m_Radius: 6
 --- !u!212 &6667085274387897254
 SpriteRenderer:
   m_ObjectHideFlags: 0

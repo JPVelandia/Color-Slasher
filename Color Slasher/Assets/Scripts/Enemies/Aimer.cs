@@ -6,7 +6,7 @@ public class Aimer : MonoBehaviour
 {
     Transform player, myTransform;
     [SerializeField] GameObject bullet;
-    [SerializeField] float time = 0.5f;
+    [SerializeField] float time = 3f;
     [SerializeField] bool k = true;
     private bool ShootPermit { get; set; }
 
@@ -37,17 +37,17 @@ public class Aimer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Player"))
-        {
+        {            
             if (player != null)
             {
-                ShootPermit = true;
+                StartCoroutine("timeBeforeBullet");                
             }
             else
             {
                 player = FindObjectOfType<PlayerMovement>().gameObject.transform;
-                ShootPermit = true;
-
+                StartCoroutine("timeBeforeBullet");
             }
         }
     }
@@ -68,5 +68,11 @@ public class Aimer : MonoBehaviour
     public void KTrue()
     {
         k = true;
+    }
+
+    IEnumerator timeBeforeBullet()
+    {
+        yield return new WaitForSeconds(1f);
+        ShootPermit = true;
     }
 }
