@@ -39,6 +39,9 @@ public class Tongue : EAttackDirect
         if(killCam) Time.timeScale = 0.5f;
         deathParticle.Play();
         Invoke("TotalDeath", deathParticle.main.duration);
+        //por alguna razón, count se resetea a 0 cada frame, hasta un máximo de 6 veces, tras eso, por fin suma 1
+        //count = count + 1;
+        //Debug.Log(" " + count);
     }
 
     void TotalDeath()

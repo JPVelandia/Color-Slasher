@@ -23,13 +23,17 @@ public abstract class Character : MonoBehaviour
 
     public virtual void TakeDamage(int damaged)
     {
-        if(name != "Character") InGetHurt();
+        if (name != "Character")
+        {
+            InGetHurt();
 
-        life -= damaged;
-
+            life -= damaged;
+        }
         if(life <= 0)
         {
-            TriggerIsDead();
+            TriggerIsDead();;
         }
     }
+
+    
 }

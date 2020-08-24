@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - PurpleButtom
+  - Room
+  - Green
   layers:
   - Default
   - TransparentFX
