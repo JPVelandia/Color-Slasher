@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Pause : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class Pause : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        PlayerLife.InCharacterDied -= Lose;
+        Finish.InWin -= Win;
+
+        PlayerLife.InCharacterDied += Lose;
+        Finish.InWin += Win;
+
         assetS = assets;
         TrunOffAssets();
     }
@@ -29,7 +36,10 @@ public class Pause : MonoBehaviour
             obj.SetActive(true);
         }
 
-        assetS[2].SetActive(false);
+        assetS[5].SetActive(false);
+        assetS[6].SetActive(false);
+
+        Time.timeScale = 0;
     }
 
     public void TrunOffAssets()
@@ -39,6 +49,30 @@ public class Pause : MonoBehaviour
             obj.SetActive(false);
         }
 
-        assetS[2].SetActive(true);
+        assetS[5].SetActive(true);
+        assetS[6].SetActive(false);
+
+        Time.timeScale = 1;
+    }
+
+    public void Win()
+    {
+        TrunOnAssets();
+
+        assetS[1].SetActive(false);
+        assetS[3].SetActive(false);
+        assetS[6].SetActive(true);
+
+        assetS[6].GetComponent<TextMeshProUGUI>().text = "You made them sashimi!";
+    }
+    public void Lose()
+    {
+        TrunOnAssets();
+
+        assetS[1].SetActive(false);
+        assetS[3].SetActive(false);
+        assetS[6].SetActive(true);
+
+        assetS[6].GetComponent<TextMeshProUGUI>().text = "Oh no!\nYou were slashed!";
     }
 }
