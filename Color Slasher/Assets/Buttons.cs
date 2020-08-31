@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    [SerializeField] GameObject purpleWall;
+    [SerializeField] GameObject TriggerWall;
     [SerializeField] GameObject Room;
-    [SerializeField] GameObject GreenPlatform;
-    [SerializeField] GameObject GreenWall;
+    [SerializeField] GameObject ContactPlatform;
+    [SerializeField] GameObject ContactPlatform2;
+    [SerializeField] GameObject ContactWall;
+    [SerializeField] GameObject ContactWall2;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,37 +19,40 @@ public class Buttons : MonoBehaviour
             Room.SetActive(false);
         }
 
-        if (other.tag == "PurpleButtom")
+        if (other.tag == "Button")
         {
-            purpleWall.SetActive(false);
-            StartCoroutine("PurpleCount");
+            TriggerWall.SetActive(false);
+            StartCoroutine("TriggerCount");
         }
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Green"))
+        if (other.gameObject.CompareTag("Contact"))
         {
-            GreenWall.SetActive(false);
-            StartCoroutine("GreenCount");
+            ContactWall.SetActive(false);
+            ContactWall2.SetActive(false);
+            StartCoroutine("ContactCount");
         }
     }
 
-    IEnumerator PurpleCount()
+    IEnumerator TriggerCount()
     {
-        yield return new WaitForSeconds(1f);
-        purpleWall.SetActive(true);        
+        yield return new WaitForSeconds(1.5f);
+        TriggerWall.SetActive(true);        
     }
 
-    IEnumerator GreenCount()
+    IEnumerator ContactCount()
     {
         yield return new WaitForSeconds(1.3f);
-        GreenWall.SetActive(true);
+        ContactWall.SetActive(true);
+        ContactWall2.SetActive(true);
     }
 
     IEnumerator RoomCount()
     {
         yield return new WaitForSeconds(3f);
-        GreenPlatform.SetActive(true);
+        ContactPlatform.SetActive(true);
+        ContactPlatform2.SetActive(true);
     }
 }
