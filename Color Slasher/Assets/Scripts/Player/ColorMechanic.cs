@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum ColorMech { blue, red, yellow, green, white, black }
+public enum ColorMech { black, blue, green, red, white, yellow }
 
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerLife))]
@@ -37,6 +37,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
     PlayerLife playerLife;
     Hearts heartsHUD;
     Swords swordsHUD;
+    PlayerTutorial playerTutorial;
 
     //  Get the references necessary to this code.
     void SetUp()
@@ -44,6 +45,12 @@ public class ColorMechanic : MonoBehaviour, ISubject
         sr = GetComponent<SpriteRenderer>();
         playerMovement = GetComponent<PlayerMovement>();
         playerLife = GetComponent<PlayerLife>();
+        
+        try
+        {
+            playerTutorial = GetComponent<PlayerTutorial>();
+        }
+        catch{}
 
         heartsHUD = FindObjectOfType<Hearts>();
         swordsHUD = FindObjectOfType<Swords>();
@@ -121,6 +128,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
     {
         playerMovement.ColorMechUpdate(cm);
         playerLife.ColorMechUpdate(cm);
+        if(playerTutorial != null) playerTutorial.ColorMechUpdate(cm);
 
         heartsHUD.ColorMechUpdate(cm);
         swordsHUD.ColorMechUpdate(cm);
