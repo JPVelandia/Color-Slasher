@@ -12,12 +12,23 @@ public class Swords : MonoBehaviour, IObserverColor
     [SerializeField] Sprite[] swords = new Sprite[5];
 
     static Image currentSword;
+    static Slider damageBar;
 
     void Awake()
     {
         currentSword = GetComponent<Image>();
+        damageBar = GetComponentInParent<Slider>();
+
+        PlayerLife.InRefreshDamage -= RefreshDamage;
+        PlayerLife.InRefreshDamage += RefreshDamage;
 
         ColorMechUpdate(ColorMech.white);
+        RefreshDamage(0);
+    }
+
+    public void RefreshDamage(int damage)
+    {
+        damageBar.value = damage;
     }
 
     public void ColorMechUpdate(ColorMech color)

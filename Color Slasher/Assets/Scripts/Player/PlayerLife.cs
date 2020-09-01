@@ -8,22 +8,32 @@ public class PlayerLife : Character, IObserverColor
     //  Jose was here
     //public delegate void Life(int currentLife);
     //public static event Life InRefreshLife;
-    public static Action<int> InRefreshLife;
+    public static Action<int> InRefreshDamage;
     public static Action InCharacterDied;
 
-    [SerializeField] int startingHP = 3;
+    [SerializeField] int startingDamage = 0;
+    int maxDamage = 100;
 
     void Start()
     {
-        life = startingHP;
-        InRefreshLife(life);
+        damage = startingDamage;
+        InRefreshDamage(damage);
     }
 
     public override void TakeDamage(int damaged)
     {
-        base.TakeDamage(damaged);
+        if (name != "Character")
+        {
+            InGetHurt();
 
-        InRefreshLife(life);
+            damage += damaged;
+        }
+        if (damage >= maxDamage)
+        {
+            TriggerIsDead();
+        }
+
+        InRefreshDamage(damage);
     }
 
     protected override void TriggerIsDead()
@@ -50,7 +60,7 @@ public class PlayerLife : Character, IObserverColor
             break;
 
             case ColorMech.black:
-            TakeDamage(1);
+            TakeDamage(20);
             break;
 
             case ColorMech.white:
