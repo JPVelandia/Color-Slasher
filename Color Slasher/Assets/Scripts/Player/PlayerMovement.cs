@@ -192,12 +192,12 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     }
     public void ActivateYellowPower()
     {
-        damage = 6;
+        forceSlash = 20;
     }
 
     public void DeactivatePower()
     {
         DoubleSwipe = false;
-        damage = 3;
+        forceSlash = 15;
     }
 }
