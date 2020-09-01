@@ -4984,6 +4984,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35d1109529a7849a9acc2af0a13dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
-  damage: 1
+  damage: 20
   killCam: 1
