@@ -14,7 +14,7 @@ public class DamageIndicators : MonoBehaviour
         FirstTime = true;
 
         EAttackDirect.InGetHurt += TriggerToEnemy;
-        PlayerLife.InRefreshLife += TriggerToCharacter;
+        PlayerLife.InRefreshDamage += TriggerToCharacter;
     }
 
     static void TriggerToEnemy()
@@ -32,7 +32,7 @@ public class DamageIndicators : MonoBehaviour
     public static void UnsuscribeEvents()
     {
         EAttackDirect.InGetHurt -= TriggerToEnemy;
-        PlayerLife.InRefreshLife -= TriggerToCharacter;
+        PlayerLife.InRefreshDamage -= TriggerToCharacter;
     }
 
     static bool FirstTime{get; set;}

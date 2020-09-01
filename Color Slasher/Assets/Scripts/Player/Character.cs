@@ -7,7 +7,7 @@ public abstract class Character : MonoBehaviour
 {
     public static Action InGetHurt;
 
-    public int life;
+    public int damage;
     protected bool IsDead{get;set;}
 
     protected virtual void Awake()
@@ -27,13 +27,11 @@ public abstract class Character : MonoBehaviour
         {
             InGetHurt();
 
-            life -= damaged;
+            damage -= damaged;
         }
-        if(life <= 0)
+        if(damage <= 0)
         {
-            TriggerIsDead();;
+            TriggerIsDead();
         }
     }
-
-    
 }

@@ -11,9 +11,9 @@ public class Hearts : MonoBehaviour, IObserverColor
     {
         hearts = GetComponentsInChildren<Image>();
 
-        PlayerLife.InRefreshLife -= RefreshHearts;
+        PlayerLife.InRefreshDamage -= RefreshHearts;
 
-        PlayerLife.InRefreshLife += RefreshHearts;
+        PlayerLife.InRefreshDamage += RefreshHearts;
 
         TurnOffHearts();
     }
