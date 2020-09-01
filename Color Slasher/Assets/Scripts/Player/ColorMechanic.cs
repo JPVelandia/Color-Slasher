@@ -130,7 +130,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
         playerLife.ColorMechUpdate(cm);
         if(playerTutorial != null) playerTutorial.ColorMechUpdate(cm);
 
-        heartsHUD.ColorMechUpdate(cm);
+        //heartsHUD.ColorMechUpdate(cm);
         swordsHUD.ColorMechUpdate(cm);
     }
 }
