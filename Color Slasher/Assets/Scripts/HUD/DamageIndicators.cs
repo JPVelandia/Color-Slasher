@@ -22,7 +22,7 @@ public class DamageIndicators : MonoBehaviour
         indicators[0].GetComponent<Animator>().SetTrigger("Play");
     }
 
-    static void TriggerToCharacter(int i)
+    static void TriggerToCharacter(int i, int f)
     {
         Debug.Log("Awake " + FirstTime);
         if(!FirstTime) indicators[1].GetComponent<Animator>().SetTrigger("Play");
