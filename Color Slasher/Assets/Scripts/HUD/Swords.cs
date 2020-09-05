@@ -12,66 +12,76 @@ public class Swords : MonoBehaviour, IObserverColor
     [SerializeField] Sprite[] swords = new Sprite[5];
 
     static Image currentSword;
-    static Slider damageBar;
+    static Image[] swordsImages;
 
     void Awake()
     {
         currentSword = GetComponent<Image>();
-        damageBar = GetComponentInParent<Slider>();
+        swordsImages = GetComponentsInChildren<Image>();
 
         PlayerLife.InRefreshDamage -= RefreshDamage;
         PlayerLife.InRefreshDamage += RefreshDamage;
 
         ColorMechUpdate(ColorMech.white);
-        RefreshDamage(0);
+        RefreshDamage(0, 100);
     }
 
-    public void RefreshDamage(int damage)
+    public void RefreshDamage(int health, int maxHealth)
     {
-        damageBar.value = damage;
+
+        swordsImages[1].fillAmount = (float)health / (float)maxHealth;
     }
 
     public void ColorMechUpdate(ColorMech color)
     {
         if(currentSword == null) currentSword = GetComponent<Image>();
 
-        Color newColor = new Color();
+        Color frontColor = new Color();
+        Color backColor = new Color();
         int swordIndex = 4;
 
         switch(color)
         {
             case ColorMech.blue:
-            newColor = Color.blue;
+            frontColor = Color.blue;
+            backColor = Color.yellow;
             swordIndex = 0;
             break;
 
             case ColorMech.green:
-            newColor = Color.green;
+            frontColor = Color.green;
+            backColor = Color.magenta;
             swordIndex = 1;
             break;
 
             case ColorMech.red:
-            newColor = Color.red;
+            frontColor = Color.red;
+            backColor = Color.cyan;
             swordIndex = 2;
             break;
 
             case ColorMech.yellow:
-            newColor = Color.yellow;
+            frontColor = Color.yellow;
+                backColor = Color.blue;
             swordIndex = 3;
             break;
 
             case ColorMech.white:
-            newColor = Color.white;
+            frontColor = Color.white;
+            backColor = Color.black;
             swordIndex = 4;
             break;
 
             case ColorMech.black:
-            newColor = Color.white;
+            frontColor = Color.white;
+            backColor = Color.black;
             swordIndex = 4;
             break;
         }
 
-        currentSword.sprite = swords[swordIndex];
-        currentSword.color = newColor * new Vector4(1f,1f,1f,transparency);
+        swordsImages[0].sprite = swords[swordIndex];
+        swordsImages[1].sprite = swords[swordIndex];
+        swordsImages[0].color = backColor;
+        swordsImages[1].color = frontColor * new Vector4(1f,1f,1f,transparency);
     }
 }

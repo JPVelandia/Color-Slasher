@@ -18,7 +18,7 @@ public class Hearts : MonoBehaviour, IObserverColor
         TurnOffHearts();
     }
 
-    void RefreshHearts(int hearts)
+    void RefreshHearts(int hearts, int holi)
     {        
         TurnOffHearts();
 

@@ -52,6 +52,6 @@ public class Tongue : EAttackDirect
 
     protected override void Attack()
     {
-        player.TakeDamage(damage);
+        player.TakeDamage(health);
     }
 }
