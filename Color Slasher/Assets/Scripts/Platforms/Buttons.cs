@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
+    [SerializeField] enum quantity { one, two, multiple };
+    [SerializeField] quantity Quantity;
     [SerializeField] GameObject TriggerWall;
     [SerializeField] GameObject Room;
     [SerializeField] GameObject ContactPlatform;
     [SerializeField] GameObject ContactPlatform2;
     [SerializeField] GameObject ContactWall;
     [SerializeField] GameObject ContactWall2;
+
+    /*void Start()
+    {
+        if (Quantity == quantity.one)
+        {
+            HideInInspector
+            ContactPlatform2 = null;
+            ContactWall2 = null;
+        }
+    }*/
 
     void OnTriggerEnter2D(Collider2D other)
     {

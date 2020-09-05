@@ -6824,6 +6824,10 @@ PrefabInstance:
       propertyPath: killCam
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1842112056, guid: d07b453b2d227874d9889917c3545917, type: 3}
+      propertyPath: damage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4155343375781002928, guid: d07b453b2d227874d9889917c3545917,
         type: 3}
       propertyPath: constrainInsideGraph
