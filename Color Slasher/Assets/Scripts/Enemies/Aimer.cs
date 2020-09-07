@@ -21,7 +21,7 @@ public class Aimer : MonoBehaviour
     {
         if(ShootPermit == true)
         {
-            myTransform.LookAt(player, Vector3.down);
+            myTransform.LookAt(player, Vector3.forward);
             if (k == true)
             {
                 Shoot();
@@ -33,7 +33,7 @@ public class Aimer : MonoBehaviour
 
     private void LateUpdate()
     {
-        myTransform.rotation *= Quaternion.Euler(0, 0, 1);
+        //myTransform.rotation *= Quaternion.Euler(0, 0, 1);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
