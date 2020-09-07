@@ -498,6 +498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 72577521}
+  - component: {fileID: 72577522}
   m_Layer: 0
   m_Name: ----- Player -----
   m_TagString: Untagged
@@ -520,6 +521,18 @@ Transform:
   m_Father: {fileID: 1546175480}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72577522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72577520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16dd254b65995b44afde85442caeda2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &99028440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6667085274387897274, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
@@ -539,7 +552,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -13.326679, y: 0}
+  m_Offset: {x: -13.031193, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -550,7 +563,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.273357, y: 2.12}
+  m_Size: {x: 27.682384, y: 2.12}
   m_EdgeRadius: 0
 --- !u!1 &111866293
 GameObject:
@@ -1428,17 +1441,17 @@ PrefabInstance:
     - target: {fileID: 8300602974573118062, guid: 1f363056b2173cb4684f57cebc01bd22,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300602974573118062, guid: 1f363056b2173cb4684f57cebc01bd22,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300602974573118062, guid: 1f363056b2173cb4684f57cebc01bd22,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300602974573118062, guid: 1f363056b2173cb4684f57cebc01bd22,
         type: 3}
@@ -7595,6 +7608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667085274387897252, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 27.15
       objectReference: {fileID: 0}
     - target: {fileID: 6667085274387897275, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}

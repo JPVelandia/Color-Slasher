@@ -13,6 +13,7 @@ public class Aimer : MonoBehaviour
     private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject.transform;
+        //player = GameObject.FindGameObjectWithTag("Player").transform;
         myTransform = GetComponent<Transform>();
     }
 
@@ -20,7 +21,7 @@ public class Aimer : MonoBehaviour
     {
         if(ShootPermit == true)
         {
-            myTransform.LookAt(player, Vector3.forward);
+            myTransform.LookAt(player, Vector3.down);
             if (k == true)
             {
                 Shoot();
@@ -63,6 +64,7 @@ public class Aimer : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, -myTransform.eulerAngles.z));
+        //Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, -90));
     }
 
     public void KTrue()
