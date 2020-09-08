@@ -3426,6 +3426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2bcbc9a3cbd6849ab3b1933317835d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Quantity: 0
   TriggerWall: {fileID: 0}
   Room: {fileID: 246552946}
   ContactPlatform: {fileID: 0}
@@ -4601,6 +4602,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 977072142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1252772186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252772188}
+  - component: {fileID: 1252772187}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1252772187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252772186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f919f9bb0c542d48a827ddea1021256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: playerHit
+    clip: {fileID: 8300000, guid: 549c800ea7f6c574eaff275228f1a677, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: floorHit
+    clip: {fileID: 8300000, guid: 26b41b2347d64224cbd9d472b9a5f8ad, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+--- !u!4 &1252772188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252772186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.100006, y: 152.05556, z: -18.862223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1256864497
 GameObject:
   m_ObjectHideFlags: 0
