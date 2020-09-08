@@ -302,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 1473896902291748955, guid: 135ba2a662c4ff24b8c916e2a32c6243,
         type: 3}
       propertyPath: m_TagString
-      value: PurpleButtom
+      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 5368039130191094048, guid: 135ba2a662c4ff24b8c916e2a32c6243,
         type: 3}
@@ -816,6 +816,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1473896902291748948, guid: 135ba2a662c4ff24b8c916e2a32c6243,
     type: 3}
   m_PrefabInstance: {fileID: 1651951461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &120183688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5189103840644905052, guid: a7c1cdbc413a8324faf370d79e72a41b,
+    type: 3}
+  m_PrefabInstance: {fileID: 690557942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &125829204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5189103840644905052, guid: a7c1cdbc413a8324faf370d79e72a41b,
+    type: 3}
+  m_PrefabInstance: {fileID: 726035770}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &176227156
 GameObject:
@@ -2556,7 +2568,7 @@ PrefabInstance:
     - target: {fileID: 5189103840644905052, guid: a7c1cdbc413a8324faf370d79e72a41b,
         type: 3}
       propertyPath: m_TagString
-      value: Green
+      value: Contact
       objectReference: {fileID: 0}
     - target: {fileID: 5189103840644905053, guid: a7c1cdbc413a8324faf370d79e72a41b,
         type: 3}
@@ -3362,11 +3374,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Quantity: 0
-  TriggerWall: {fileID: 0}
+  TriggerWall: {fileID: 2058686630}
   Room: {fileID: 246552946}
-  ContactPlatform: {fileID: 0}
+  ContactPlatform: {fileID: 120183688}
   ContactPlatform2: {fileID: 0}
-  ContactWall: {fileID: 0}
+  ContactWall: {fileID: 125829204}
   ContactWall2: {fileID: 0}
 --- !u!4 &795200817 stripped
 Transform:
@@ -9363,6 +9375,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1473896902291748951, guid: 135ba2a662c4ff24b8c916e2a32c6243, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 135ba2a662c4ff24b8c916e2a32c6243, type: 3}
+--- !u!1 &2058686630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1473896902291748955, guid: 135ba2a662c4ff24b8c916e2a32c6243,
+    type: 3}
+  m_PrefabInstance: {fileID: 79619973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2066603390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5999594331165896690, guid: d07b453b2d227874d9889917c3545917,
