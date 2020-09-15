@@ -9205,8 +9205,8 @@ GameObject:
   - component: {fileID: 1578540829}
   - component: {fileID: 1578540828}
   - component: {fileID: 1578540827}
-  - component: {fileID: 1578540826}
   - component: {fileID: 1578540825}
+  - component: {fileID: 1578540824}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9214,6 +9214,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1578540824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578540823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe5c75a73c0d704d8a3fb231978f4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1578540825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9301,18 +9313,6 @@ MonoBehaviour:
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
   showGraphs: 1
---- !u!114 &1578540826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578540823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7203331ff0ccc6d46a1007cf762bc9ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1578540827
 BoxCollider2D:
   m_ObjectHideFlags: 0

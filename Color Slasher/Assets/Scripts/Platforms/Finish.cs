@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
@@ -27,6 +28,25 @@ public class Finish : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             InWin();
+
+            int caseSwitch = 1;
+
+            switch (caseSwitch)
+            {
+                case 1:
+                    SceneManager.LoadScene(2);
+                    break;
+                case 2:
+                    SceneManager.LoadScene(3);
+                    break;
+                case 3:
+                    SceneManager.LoadScene(4);
+                    break;
+                case 4:
+                    SceneManager.LoadScene(5);
+                    break;
+
+            }
         }
     }
 }
