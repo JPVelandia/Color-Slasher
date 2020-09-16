@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay/Nivel tut.unity
     guid: 93b12153f554dfd46806f5ae1adc5bd1
+  - enabled: 1
+    path: Assets/Scenes/Testing/Mari Testingg.unity
+    guid: c8201cdee662f0e4883345f59a706fc7
   m_configObjects: {}
