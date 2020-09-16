@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         PlayParticlesSlash();
 
         //Play Hit Audio
-        audio.Play("playerHit");
+        // audio.Play("playerHit");
         //  ***Debug.Log(DirectionSlash);
     }
 
@@ -122,8 +122,8 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //Play Collision Audio
-        FindObjectOfType<AudioManager>().Play("floorHit");
+        //  Play Collision Audio
+        //FindObjectOfType<AudioManager>().Play("floorHit");
 
         //  When touching a platform restart the Grab counter.
         StopAllCoroutines();
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         particleSlash.Play();
     }
 
-    void TriggerDead()
+    void TriggerDead(int i)
     {
         IsDead = true;
     }
