@@ -103,7 +103,7 @@ Material:
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
->>>>>>> f67fc7933aa6e52a3cffcd8c556232bae5bc6064
+>>>>>>> Juan-Pablo-Montoya
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   hashCode: 1728938484
   material: {fileID: -6380366118177705497}
   materialHashCode: -1112448257
->>>>>>> f67fc7933aa6e52a3cffcd8c556232bae5bc6064
+>>>>>>> Juan-Pablo-Montoya
   m_Version: 1.1.0
   m_SourceFontFileGUID: 6b5ee4d9dc1616347b2bd85e6009246b
   m_SourceFontFile_EditorRef: {fileID: 0}
@@ -1777,7 +1777,7 @@ MonoBehaviour:
   - {fileID: 1438234901142203572}
 =======
   - {fileID: 7669561119580022634}
->>>>>>> f67fc7933aa6e52a3cffcd8c556232bae5bc6064
+>>>>>>> Juan-Pablo-Montoya
   m_AtlasTextureIndex: 0
   m_UsedGlyphRects:
   - m_X: 0
@@ -2473,7 +2473,7 @@ Material:
 --- !u!28 &1438234901142203572
 =======
 --- !u!28 &7669561119580022634
->>>>>>> f67fc7933aa6e52a3cffcd8c556232bae5bc6064
+>>>>>>> Juan-Pablo-Montoya
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
