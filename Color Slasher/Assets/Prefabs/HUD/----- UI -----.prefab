@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.000122, y: 2.4115906}
+  m_AnchoredPosition: {x: -30, y: 15}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6852536949201419964
@@ -381,8 +381,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad977c6a1cfbaed4eb2580a57469d1af, type: 2}
-  m_sharedMaterial: {fileID: 8506612762058863779, guid: ad977c6a1cfbaed4eb2580a57469d1af,
+  m_fontAsset: {fileID: 11400000, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb, type: 2}
+  m_sharedMaterial: {fileID: 55797784796450762, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -408,8 +408,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 82.6
-  m_fontSizeBase: 82.6
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dd226faca8a9b744784d582667f86dbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddadb89f1191463418677b3bdd501bc2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -980,7 +980,7 @@ RectTransform:
   m_GameObject: {fileID: 6852536949954582629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6264628, y: 0.6264628, z: 0.6264628}
+  m_LocalScale: {x: 0.7589335, y: 0.7589335, z: 0.7589335}
   m_Children: []
   m_Father: {fileID: 6852536949667105254}
   m_RootOrder: 1
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30df416748b632043a406042761ebe30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b26031a78294af244b25bd8eb23fe81a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1693,8 +1693,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad977c6a1cfbaed4eb2580a57469d1af, type: 2}
-  m_sharedMaterial: {fileID: 8506612762058863779, guid: ad977c6a1cfbaed4eb2580a57469d1af,
+  m_fontAsset: {fileID: 11400000, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb, type: 2}
+  m_sharedMaterial: {fileID: 55797784796450762, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2237,7 +2237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -216, y: -4}
+  m_AnchoredPosition: {x: -250, y: -4}
   m_SizeDelta: {x: 99, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6852536950639247189
@@ -2561,8 +2561,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad977c6a1cfbaed4eb2580a57469d1af, type: 2}
-  m_sharedMaterial: {fileID: 8506612762058863779, guid: ad977c6a1cfbaed4eb2580a57469d1af,
+  m_fontAsset: {fileID: 11400000, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb, type: 2}
+  m_sharedMaterial: {fileID: 55797784796450762, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3237,8 +3237,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: WinNLose Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 85133617d43d77c46902ddedd4b2a822, type: 2}
-  m_sharedMaterial: {fileID: 8787562704249889010, guid: 85133617d43d77c46902ddedd4b2a822,
+  m_fontAsset: {fileID: 11400000, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb, type: 2}
+  m_sharedMaterial: {fileID: 55797784796450762, guid: 44e31ba4cbea0b145b4d55ff9ddec6cb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3281,7 +3281,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 9
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3310,7 +3310,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
