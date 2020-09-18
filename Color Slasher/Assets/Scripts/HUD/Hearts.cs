@@ -2,30 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Hearts : MonoBehaviour, IObserverColor
 {
-    Image heart;
-
-    static TextMeshProUGUI livesText;
+    static Image[] hearts;
 
     void Awake()
     {
-        heart = GetComponentInChildren<Image>();
-        livesText = GetComponentInChildren<TextMeshProUGUI>();
+        hearts = GetComponentsInChildren<Image>();
 
+        PlayerLife.InRefreshDamage -= RefreshHearts;
 
-        PlayerLife.InCharacterDied -= RefreshHearts;
+        PlayerLife.InRefreshDamage += RefreshHearts;
 
-        PlayerLife.InCharacterDied += RefreshHearts;
-
-        RefreshHearts(TotalLives.ActualLives);
+        TurnOffHearts();
     }
-    void RefreshHearts(int lives)
-    {   
-        livesText.text = "X " + lives;
+
+    void RefreshHearts(int hearts, int holi)
+    {        
+        TurnOffHearts();
+
+        //  Activate the number of hearts given.
+        for(int i = 0; i < hearts; i++)
+        {
+            Hearts.hearts[i].gameObject.SetActive(true);
+        }
     }
+
+    void TurnOffHearts()
+    {
+        //  Deactivates al hearts.
+        foreach(Image heart in Hearts.hearts)
+        {
+            heart.gameObject.SetActive(false);
+        }
+    }
+
     public void ColorMechUpdate(ColorMech color)
     {
         Color newColor = new Color();
@@ -57,7 +69,9 @@ public class Hearts : MonoBehaviour, IObserverColor
             break;
         }
 
-        heart.color = newColor;
-        livesText.color = newColor;
+        foreach(Image heart in Hearts.hearts)
+        {
+            heart.color = newColor;
+        }
     }
 }

@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LifeBar : MonoBehaviour, IObserverColor
+public class Swords : MonoBehaviour, IObserverColor
 {
-    [Header("Icons for each power (alphabetical order)")]
-    [SerializeField] Sprite[] icons = new Sprite[5];
-    static Image[] damageBar;
+    [Header("Transparency of swords in HUD")]
+    [SerializeField] float transparency = 0.8f;
+
+    [Header("Swords of each color (alphabetical order)")]
+    [SerializeField] Sprite[] swords = new Sprite[5];
+
+    static Image currentSword;
+    static Image[] swordsImages;
 
     void Awake()
     {
-        damageBar = GetComponentsInChildren<Image>();
+        currentSword = GetComponent<Image>();
+        swordsImages = GetComponentsInChildren<Image>();
 
         PlayerLife.InRefreshDamage -= RefreshDamage;
         PlayerLife.InRefreshDamage += RefreshDamage;
@@ -23,62 +29,59 @@ public class LifeBar : MonoBehaviour, IObserverColor
     public void RefreshDamage(int health, int maxHealth)
     {
 
-        damageBar[1].fillAmount = (float)health / (float)maxHealth;
+        swordsImages[1].fillAmount = (float)health / (float)maxHealth;
     }
 
     public void ColorMechUpdate(ColorMech color)
     {
-        Image currentIcon = damageBar[damageBar.Length-2]; 
+        if(currentSword == null) currentSword = GetComponent<Image>();
+
         Color frontColor = new Color();
         Color backColor = new Color();
-        int iconIndex = 4;
-
-        //if(currentIcon == null) currentIcon = GetComponent<Image>();
+        int swordIndex = 4;
 
         switch(color)
         {
             case ColorMech.blue:
             frontColor = Color.blue;
             backColor = Color.yellow;
-            iconIndex = 0;
+            swordIndex = 0;
             break;
 
             case ColorMech.green:
             frontColor = Color.green;
             backColor = Color.magenta;
-            iconIndex = 1;
+            swordIndex = 1;
             break;
 
             case ColorMech.red:
             frontColor = Color.red;
             backColor = Color.cyan;
-            iconIndex = 2;
+            swordIndex = 2;
             break;
 
             case ColorMech.yellow:
             frontColor = Color.yellow;
                 backColor = Color.blue;
-            iconIndex = 3;
+            swordIndex = 3;
             break;
 
             case ColorMech.white:
             frontColor = Color.white;
             backColor = Color.black;
-            iconIndex = 4;
+            swordIndex = 4;
             break;
 
             case ColorMech.black:
             frontColor = Color.white;
             backColor = Color.black;
-            iconIndex = 4;
+            swordIndex = 4;
             break;
         }
 
-        foreach(Image img in damageBar)
-        {
-            img.color = frontColor;
-        }
-
-        currentIcon.sprite = icons[iconIndex];
+        swordsImages[0].sprite = swords[swordIndex];
+        swordsImages[1].sprite = swords[swordIndex];
+        swordsImages[0].color = backColor;
+        swordsImages[1].color = frontColor * new Vector4(1f,1f,1f,transparency);
     }
 }

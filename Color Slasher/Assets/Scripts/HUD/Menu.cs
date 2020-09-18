@@ -69,7 +69,7 @@ void Awake()
         deployMenu.Unexecute();
     }
 
-    public void Lose(int i)
+    public void Lose()
     {
         if(winNloseTxtS != null)
         {

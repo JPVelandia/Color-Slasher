@@ -3310,7 +3310,11 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
+<<<<<<< HEAD
     lineCount: 2
+=======
+    lineCount: 1
+>>>>>>> parent of ea71e28... Merge branch 'Player'
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

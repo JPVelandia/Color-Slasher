@@ -36,7 +36,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
     PlayerMovement playerMovement;
     PlayerLife playerLife;
     Hearts heartsHUD;
-    LifeBar swordsHUD;
+    Swords swordsHUD;
     PlayerTutorial playerTutorial;
 
     //  Get the references necessary to this code.
@@ -53,7 +53,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
         catch{}
 
         heartsHUD = FindObjectOfType<Hearts>();
-        swordsHUD = FindObjectOfType<LifeBar>();
+        swordsHUD = FindObjectOfType<Swords>();
 
         PlayerMovement.InDeactivatePower += PowerUp;
     }
@@ -130,7 +130,7 @@ public class ColorMechanic : MonoBehaviour, ISubject
         playerLife.ColorMechUpdate(cm);
         if(playerTutorial != null) playerTutorial.ColorMechUpdate(cm);
 
-        heartsHUD.ColorMechUpdate(cm);
+        //heartsHUD.ColorMechUpdate(cm);
         swordsHUD.ColorMechUpdate(cm);
     }
 }

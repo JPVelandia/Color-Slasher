@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restart
+public class Restart : MonoBehaviour
 {
     public void RestartActiveScene()
     {
