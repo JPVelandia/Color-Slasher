@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    [SerializeField] enum quantity { one, two, multiple };
-    [SerializeField] quantity Quantity;
     [SerializeField] GameObject TriggerWall;
     [SerializeField] GameObject Room;
     [SerializeField] GameObject ContactPlatform;
@@ -13,15 +11,6 @@ public class Buttons : MonoBehaviour
     [SerializeField] GameObject ContactWall;
     [SerializeField] GameObject ContactWall2;
 
-    /*void Start()
-    {
-        if (Quantity == quantity.one)
-        {
-            HideInInspector
-            ContactPlatform2 = null;
-            ContactWall2 = null;
-        }
-    }*/
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -43,27 +32,27 @@ public class Buttons : MonoBehaviour
         if (other.gameObject.CompareTag("Contact"))
         {
             ContactWall.SetActive(false);
-            ContactWall2.SetActive(false);
+            ContactWall2.SetActive(false);            
             StartCoroutine("ContactCount");
         }
     }
 
     IEnumerator TriggerCount()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         TriggerWall.SetActive(true);        
     }
 
     IEnumerator ContactCount()
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(2.5f);
         ContactWall.SetActive(true);
         ContactWall2.SetActive(true);
     }
 
     IEnumerator RoomCount()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         ContactPlatform.SetActive(true);
         ContactPlatform2.SetActive(true);
     }
