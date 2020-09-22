@@ -301,12 +301,12 @@ PrefabInstance:
     - target: {fileID: 472468480623085379, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.435598
+      value: -23.3
       objectReference: {fileID: 0}
     - target: {fileID: 472468480623085379, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 472468480623085379, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
@@ -388,6 +388,16 @@ PrefabInstance:
       propertyPath: ContactPlatform2
       value: 
       objectReference: {fileID: 1623858438}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1623858438}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 1634179691}
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
@@ -793,7 +803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213846955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4899998, y: -16.822659, z: -87.26191}
+  m_LocalPosition: {x: -3.3544006, y: -17.05266, z: -87.26191}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1693768498}
@@ -1455,7 +1465,7 @@ PrefabInstance:
     - target: {fileID: 8339382171214890376, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8339382171214890381, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
@@ -5514,7 +5524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559134579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4899998, y: -15.372659, z: -88.26191}
+  m_LocalPosition: {x: -3.3544006, y: -15.60266, z: -88.26191}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1707050354}
@@ -5998,7 +6008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686517721}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ----- Level -----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
