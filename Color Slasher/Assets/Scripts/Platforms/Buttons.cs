@@ -6,21 +6,12 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    /*
+
     [SerializeField] GameObject TriggerWall;
     [SerializeField] GameObject Room;
 
-    [SerializeField] GameObject[] contactPlatforms;
-    [SerializeField] GameObject[] contactWalls;
+    [SerializeField] GameObject contactPlatform;
 
-    PlatfomIndex platfomIndex;
-    
-    void Awake()
-    {
-        contactPlatforms = GetComponents<GameObject>();
-        contactWalls = GetComponents<GameObject>();
-    }
-        
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Room")
@@ -36,32 +27,33 @@ public class Buttons : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (contactPlatforms[platfomIndex.index].CompareTag("Contact"))
-        {
-            contactWalls[platfomIndex.index].SetActive(false);                 
-            StartCoroutine("ContactCount");
-        }        
-    }
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if (other.gameObject.CompareTag("Contact"))
+    //    {
+    //        ContactIndex = int.Parse(other.gameObject.name.ToString());
+    //        contactWalls[ContactIndex].SetActive(false);
+    //        StartCoroutine("ContactCount");
+    //        Debug.Log(ContactIndex);
+    //    }
+    //}
 
     IEnumerator TriggerCount()
     {
         yield return new WaitForSeconds(2.5f);
-        TriggerWall.SetActive(true);        
+        TriggerWall.SetActive(true);
     }
 
-    IEnumerator ContactCount()
-    {
-        yield return new WaitForSeconds(2.5f);
-        ContactWall.SetActive(true);
-        ContactWall2.SetActive(true);
-    }
+    //IEnumerator ContactCount()
+    //{
+    //    yield return new WaitForSeconds(2.5f);
+    //    contactWalls[ContactIndex].SetActive(true);
+    //    Debug.Log("holi" + ContactIndex);
+    //}
 
     IEnumerator RoomCount()
     {
         yield return new WaitForSeconds(2f);
-        ContactPlatform.SetActive(true);
-        ContactPlatform2.SetActive(true);
-    } */
+        contactPlatform.SetActive(true);
+    }
 }
