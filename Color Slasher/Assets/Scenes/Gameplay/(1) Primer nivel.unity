@@ -398,6 +398,11 @@ PrefabInstance:
       propertyPath: wall
       value: 
       objectReference: {fileID: 1634179691}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: triggerWall
+      value: 
+      objectReference: {fileID: 1634179691}
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
@@ -1465,7 +1470,7 @@ PrefabInstance:
     - target: {fileID: 8339382171214890376, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8339382171214890381, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}

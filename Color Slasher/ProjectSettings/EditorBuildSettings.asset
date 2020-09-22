@@ -9,17 +9,35 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay/Home.unity
     guid: 2e42f5a33559f734ba6967a5f7a5a1ca
   - enabled: 1
-    path: Assets/Scenes/Gameplay/(8)octavo nivel.unity
-    guid: f64a32770d9e8ee4cb3bd285cb1d5931
+    path: Assets/Scenes/Gameplay/(1) Primer nivel.unity
+    guid: 14c1fafe4bad8504984b55a219a59699
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/(2)Segundo nivel.unity
+    guid: 47e1e0fe7f1ffe4479a2b0fabb4947a1
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/(3)Tercer nivel.unity
+    guid: 3fe1632ea847b0c42be4bb6eb398e3b1
   - enabled: 1
     path: Assets/Scenes/Gameplay/(4)cuarto nivel.unity
     guid: 9a3b7f0399a064641a4cd459ad7aa53e
   - enabled: 1
-    path: "Assets/Scenes/Gameplay/(10)d\xE9cimo nivel.unity"
-    guid: 4f7b72b4615ebc346b3210db6a796a12
+    path: Assets/Scenes/Gameplay/(5)Quinto nivel.unity
+    guid: 693cfbfc9f34d0b4f83b9d04631ffada
   - enabled: 1
     path: Assets/Scenes/Gameplay/(6)sexto nivel.unity
     guid: 5912c876e6927b44185954833bfc2814
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/(7)Septimo nivel.unity
+    guid: cb4ff21c6d49bb244b8679ab346fc008
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/(8)octavo nivel.unity
+    guid: f64a32770d9e8ee4cb3bd285cb1d5931
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/(9) noveno nivel.unity
+    guid: d4a273c617abfc246a449430bf68143c
+  - enabled: 1
+    path: "Assets/Scenes/Gameplay/(10)d\xE9cimo nivel.unity"
+    guid: 4f7b72b4615ebc346b3210db6a796a12
   - enabled: 1
     path: Assets/Scenes/Gameplay/ultimo nivel.unity
     guid: 93b12153f554dfd46806f5ae1adc5bd1

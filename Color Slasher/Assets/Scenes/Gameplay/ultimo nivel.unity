@@ -11748,6 +11748,16 @@ PrefabInstance:
       propertyPath: wall2
       value: 
       objectReference: {fileID: 305962027}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: triggerWall
+      value: 
+      objectReference: {fileID: 1057573960}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: collisionWall
+      value: 
+      objectReference: {fileID: 305962027}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4937714355d0988419c7085f76198cd6, type: 3}
 --- !u!1001 &6852536949920132179

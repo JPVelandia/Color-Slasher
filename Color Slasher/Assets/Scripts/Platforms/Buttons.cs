@@ -13,6 +13,8 @@ public class Buttons : MonoBehaviour
     [SerializeField] GameObject turnedOffButton;
     [SerializeField] GameObject collisionWall;
 
+    [SerializeField] GameObject toTurnOn;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Room")
@@ -34,6 +36,10 @@ public class Buttons : MonoBehaviour
         {
             collisionWall.SetActive(false);
             StartCoroutine("ContactCount");
+        }
+        if (other.gameObject.CompareTag("TurnOn"))
+        {
+            toTurnOn.SetActive(true);
         }
     }
 
