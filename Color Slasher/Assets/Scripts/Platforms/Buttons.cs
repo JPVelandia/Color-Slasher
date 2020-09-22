@@ -1,17 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
+    /*
     [SerializeField] GameObject TriggerWall;
     [SerializeField] GameObject Room;
-    [SerializeField] GameObject ContactPlatform;
-    [SerializeField] GameObject ContactPlatform2;
-    [SerializeField] GameObject ContactWall;
-    [SerializeField] GameObject ContactWall2;
 
+    [SerializeField] GameObject[] contactPlatforms;
+    [SerializeField] GameObject[] contactWalls;
 
+    PlatfomIndex platfomIndex;
+    
+    void Awake()
+    {
+        contactPlatforms = GetComponents<GameObject>();
+        contactWalls = GetComponents<GameObject>();
+    }
+        
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Room")
@@ -29,12 +38,11 @@ public class Buttons : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Contact"))
+        if (contactPlatforms[platfomIndex.index].CompareTag("Contact"))
         {
-            ContactWall.SetActive(false);
-            ContactWall2.SetActive(false);            
+            contactWalls[platfomIndex.index].SetActive(false);                 
             StartCoroutine("ContactCount");
-        }
+        }        
     }
 
     IEnumerator TriggerCount()
@@ -55,5 +63,5 @@ public class Buttons : MonoBehaviour
         yield return new WaitForSeconds(2f);
         ContactPlatform.SetActive(true);
         ContactPlatform2.SetActive(true);
-    }
+    } */
 }
