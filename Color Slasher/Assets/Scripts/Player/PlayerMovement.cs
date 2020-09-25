@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     public static Action<string> InDeactivatePower;
     public static Action InEnemyKilled;
 
+    AudioSource mySource;
     UISoundSystem mySoundSystem;
 
     void Awake()
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         IsStill = false;
         IsFalling = true;
 
+        mySource = gameObject.GetComponent<AudioSource>();
         mySoundSystem = gameObject.GetComponent<UISoundSystem>();
 
         PlayerLife.InCharacterDied -= TriggerDead;
@@ -101,7 +103,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         PlayParticlesSlash();
 
         //Play Hit Audio
-        mySoundSystem.Acction();
+        mySoundSystem.Action();
         //  ***Debug.Log(DirectionSlash);
     }
 
@@ -123,7 +125,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     void OnCollisionEnter2D(Collision2D collision)
     {
         //  Play Collision Audio
-        //FindObjectOfType<AudioManager>().Play("floorHit");
+        mySoundSystem.Action2();
 
         //  When touching a platform restart the Grab counter.
         StopAllCoroutines();

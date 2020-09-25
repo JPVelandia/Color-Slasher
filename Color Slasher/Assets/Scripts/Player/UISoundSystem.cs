@@ -6,7 +6,7 @@ public class UISoundSystem : MonoBehaviour
 {
     AudioSource mySource;
     [SerializeField] AudioSource mainSource;
-    [SerializeField] AudioClip myClip, myClip2, myClip3, myClip4, myClip5;
+    [SerializeField] AudioClip myClip, myClip2,myClip3;
     AudioClip mainClip;
     void Awake()
     {
@@ -16,28 +16,29 @@ public class UISoundSystem : MonoBehaviour
 
     public void SoundSystem()
     {
+        Debug.Log(mySource);
         mySource.Play();
     }
-    public void Acction()
+    public void Action()
     {
         mySource.PlayOneShot(myClip);
     }
-    public void Acction2()
+    public void Action2()
     {
         mySource.PlayOneShot(myClip2);
     }
-    public void Acction3()
+    public void Action3()
     {
         mySource.PlayOneShot(myClip3);
     }
-    public void Acction4()
-    {
-        mySource.PlayOneShot(myClip4);
-    }
-    public void Acction5()
-    {
-        mySource.PlayOneShot(myClip5);
-    }
+    //public void Action4()
+    //{
+    //    mySource.PlayOneShot(myClip4);
+    //}
+    //public void Action5()
+    //{
+    //    mySource.PlayOneShot(myClip5);
+    //}
     public void Bang()
     {
         if (!mySource.isPlaying)
@@ -45,20 +46,20 @@ public class UISoundSystem : MonoBehaviour
             mySource.Play();
         }
     }
-    public void Swap()
-    {
-        mainClip = mainSource.clip;
-        mainSource.clip = myClip3;
-        myClip3 = mainClip;
+    //public void Swap()
+    //{
+    //    mainClip = mainSource.clip;
+    //    mainSource.clip = myClip3;
+    //    myClip3 = mainClip;
 
-        mainSource.Play();
-    }
-    public void Swap2()
-    {
-        mainClip = mainSource.clip;
-        mainSource.clip = myClip4;
-        myClip4 = mainClip;
+    //    mainSource.Play();
+    //}
+    //public void Swap2()
+    //{
+    //    mainClip = mainSource.clip;
+    //    mainSource.clip = myClip4;
+    //    myClip4 = mainClip;
 
-        mainSource.Play();
-    }
+    //    mainSource.Play();
+    //}
 }
