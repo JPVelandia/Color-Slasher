@@ -10,6 +10,8 @@ public class Pause : MonoBehaviour
     [SerializeField]
     GameObject[] assets;
     static GameObject[] assetS;
+
+    Restart restart;
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,10 +21,12 @@ public class Pause : MonoBehaviour
         PlayerLife.InCharacterDied += Lose;
         Finish.InWin += Win;
 
+        restart = new Restart();
+
         assetS = assets;
         TrunOffAssets();
     }
-  
+
     public void GoMenu()
     {
         Debug.Log("Click");
@@ -64,8 +68,9 @@ public class Pause : MonoBehaviour
         assetS[6].SetActive(true);
 
         assetS[6].GetComponent<TextMeshProUGUI>().text = "You made them sashimi!";
+        assetS[6].GetComponent<TextMeshProUGUI>().color = Color.green;
     }
-    public void Lose()
+    public void Lose(int lives)
     {
         TrunOnAssets();
 
@@ -74,5 +79,17 @@ public class Pause : MonoBehaviour
         assetS[6].SetActive(true);
 
         assetS[6].GetComponent<TextMeshProUGUI>().text = "Oh no!\nYou were slashed!";
+        assetS[6].GetComponent<TextMeshProUGUI>().color = Color.red;
+
+        if (lives <= 0)
+        {
+            assetS[2].SetActive(false);
+
+        }
+    }
+
+    public void Restart()
+    {
+        restart.RestartActiveScene();
     }
 }

@@ -8,7 +8,7 @@ TagManager:
   - Room
   - Contact
   - Button
-  - Master
+  - TurnOn
   layers:
   - Default
   - TransparentFX

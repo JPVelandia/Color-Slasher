@@ -2,76 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Hearts : MonoBehaviour, IObserverColor
 {
-    static Image[] hearts;
+    Image heart;
+
+    static TextMeshProUGUI livesText;
 
     void Awake()
     {
-        hearts = GetComponentsInChildren<Image>();
+        heart = GetComponentInChildren<Image>();
+        livesText = GetComponentInChildren<TextMeshProUGUI>();
 
-        PlayerLife.InRefreshDamage -= RefreshHearts;
 
-        PlayerLife.InRefreshDamage += RefreshHearts;
+        PlayerLife.InCharacterDied -= RefreshHearts;
 
-        TurnOffHearts();
+        PlayerLife.InCharacterDied += RefreshHearts;
+
+        RefreshHearts(TotalLives.ActualLives);
     }
-
-    void RefreshHearts(int hearts, int holi)
-    {        
-        TurnOffHearts();
-
-        //  Activate the number of hearts given.
-        for(int i = 0; i < hearts; i++)
-        {
-            Hearts.hearts[i].gameObject.SetActive(true);
-        }
-    }
-
-    void TurnOffHearts()
+    void RefreshHearts(int lives)
     {
-        //  Deactivates al hearts.
-        foreach(Image heart in Hearts.hearts)
-        {
-            heart.gameObject.SetActive(false);
-        }
+        livesText.text = "X " + lives;
     }
-
     public void ColorMechUpdate(ColorMech color)
     {
         Color newColor = new Color();
 
-        switch(color)
+        switch (color)
         {
             case ColorMech.blue:
-            newColor = Color.blue;
-            break;
+                newColor = Color.blue;
+                break;
 
             case ColorMech.green:
-            newColor = Color.green;
-            break;
+                newColor = Color.green;
+                break;
 
             case ColorMech.red:
-            newColor = Color.red;
-            break;
+                newColor = Color.red;
+                break;
 
             case ColorMech.yellow:
-            newColor = Color.yellow;
-            break;
+                newColor = Color.yellow;
+                break;
 
             case ColorMech.white:
-            newColor = Color.white;
-            break;
+                newColor = Color.white;
+                break;
 
             case ColorMech.black:
-            newColor = Color.white;
-            break;
+                newColor = Color.white;
+                break;
         }
 
-        foreach(Image heart in Hearts.hearts)
-        {
-            heart.color = newColor;
-        }
+        heart.color = newColor;
+        livesText.color = newColor;
     }
 }

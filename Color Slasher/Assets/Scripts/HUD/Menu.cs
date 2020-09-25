@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour
 
     MyCommand deployMenu;
 
-void Awake()
+    void Awake()
     {
         sliders[0] = musicSld;
         sliders[1] = soundFXSld;
@@ -47,8 +47,8 @@ void Awake()
     {
         List<GameObject> menuAssets = new List<GameObject>();
 
-        foreach(Slider obj in sliders) menuAssets.Add(obj.gameObject);
-        foreach(Button obj in buttons) menuAssets.Add(obj.gameObject);
+        foreach (Slider obj in sliders) menuAssets.Add(obj.gameObject);
+        foreach (Button obj in buttons) menuAssets.Add(obj.gameObject);
 
         return menuAssets;
     }
@@ -69,9 +69,9 @@ void Awake()
         deployMenu.Unexecute();
     }
 
-    public void Lose()
+    public void Lose(int i)
     {
-        if(winNloseTxtS != null)
+        if (winNloseTxtS != null)
         {
             winNloseTxtS.gameObject.SetActive(true);
             winNloseTxtS.text = "You Lose!";
@@ -84,7 +84,7 @@ void Awake()
 
     public void Win()
     {
-        if(winNloseTxtS != null)
+        if (winNloseTxtS != null)
         {
             winNloseTxtS.gameObject.SetActive(true);
             winNloseTxtS.text = "You Win!";

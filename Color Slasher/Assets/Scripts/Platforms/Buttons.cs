@@ -1,39 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    [SerializeField] enum quantity { one, two, multiple };
-    [SerializeField] quantity Quantity;
-    [SerializeField] GameObject TriggerWall;
-    [SerializeField] GameObject Room;
-    [SerializeField] GameObject ContactPlatform;
-    [SerializeField] GameObject ContactPlatform2;
-    [SerializeField] GameObject ContactWall;
-    [SerializeField] GameObject ContactWall2;
+    [SerializeField] GameObject button;
+    [SerializeField] GameObject triggerWall;
 
-    /*void Start()
-    {
-        if (Quantity == quantity.one)
-        {
-            HideInInspector
-            ContactPlatform2 = null;
-            ContactWall2 = null;
-        }
-    }*/
+    [SerializeField] GameObject room;
+    [SerializeField] GameObject turnedOffButton;
+    [SerializeField] GameObject collisionWall;
+
+    [SerializeField] GameObject toTurnOn;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Room")
         {
             StartCoroutine("RoomCount");
-            Room.SetActive(false);
+            room.SetActive(false);
         }
 
         if (other.tag == "Button")
         {
-            TriggerWall.SetActive(false);
+            triggerWall.SetActive(false);
             StartCoroutine("TriggerCount");
         }
     }
@@ -42,29 +34,30 @@ public class Buttons : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Contact"))
         {
-            ContactWall.SetActive(false);
-            ContactWall2.SetActive(false);
+            collisionWall.SetActive(false);
             StartCoroutine("ContactCount");
+        }
+        if (other.gameObject.CompareTag("TurnOn"))
+        {
+            toTurnOn.SetActive(true);
         }
     }
 
     IEnumerator TriggerCount()
     {
-        yield return new WaitForSeconds(1.5f);
-        TriggerWall.SetActive(true);        
+        yield return new WaitForSeconds(2.5f);
+        triggerWall.SetActive(true);
     }
 
     IEnumerator ContactCount()
     {
-        yield return new WaitForSeconds(1.3f);
-        ContactWall.SetActive(true);
-        ContactWall2.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        collisionWall.SetActive(true);
     }
 
     IEnumerator RoomCount()
     {
-        yield return new WaitForSeconds(3f);
-        ContactPlatform.SetActive(true);
-        ContactPlatform2.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        turnedOffButton.SetActive(true);
     }
 }

@@ -20,7 +20,7 @@ public class GoTutorial : MonoBehaviour
     public void GoTuto()
     {
         Debug.Log("Click");
-        SceneManager.LoadScene("Nivel tut");           
+        SceneManager.LoadScene(1);           
     }
 
 }

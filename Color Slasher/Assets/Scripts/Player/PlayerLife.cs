@@ -9,9 +9,14 @@ public class PlayerLife : Character, IObserverColor
     //public delegate void Life(int currentLife);
     //public static event Life InRefreshLife;
     public static Action<int, int> InRefreshDamage;
-    public static Action InCharacterDied;
+    public static Action<int> InCharacterDied;
 
     int maxHealth = 100;
+
+    new void Awake()
+    {
+        base.Awake();
+    }
 
     void Start()
     {
@@ -28,7 +33,8 @@ public class PlayerLife : Character, IObserverColor
     protected override void TriggerIsDead()
     {
         Invoke("CharacterDeath", 3f);
-        InCharacterDied();
+        TotalLives.ReduceLive();
+        InCharacterDied(TotalLives.ActualLives);
     }
     public void CharacterDeath()
     {
@@ -38,23 +44,23 @@ public class PlayerLife : Character, IObserverColor
 
     public void ColorMechUpdate(ColorMech colorMech)
     {
-        switch(colorMech)
+        switch (colorMech)
         {
             case ColorMech.green:
-            ActivateGreenPower();
-            break;
+                ActivateGreenPower();
+                break;
 
             case ColorMech.red:
-            ActivateRedPower();
-            break;
+                ActivateRedPower();
+                break;
 
             case ColorMech.black:
-            TakeDamage(20);
-            break;
+                TakeDamage(20);
+                break;
 
             case ColorMech.white:
-            DeactivatePower();
-            break;
+                DeactivatePower();
+                break;
         }
     }
 
