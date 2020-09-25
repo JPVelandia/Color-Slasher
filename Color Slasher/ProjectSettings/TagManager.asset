@@ -9,6 +9,7 @@ TagManager:
   - Contact
   - Button
   - TurnOn
+  - Master
   layers:
   - Default
   - TransparentFX
