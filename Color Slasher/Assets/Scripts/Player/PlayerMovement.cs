@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     public static Action<string> InDeactivatePower;
     public static Action InEnemyKilled;
 
-    private AudioManager audio;
+    AudioSource mySource;
+    UISoundSystem mySoundSystem;
 
     void Awake()
     {
@@ -39,7 +40,9 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         IsStill = false;
         IsFalling = true;
 
-        audio = FindObjectOfType<AudioManager>();
+        mySoundSystem = gameObject.GetComponent<UISoundSystem>();
+        mySource = gameObject.GetComponent<AudioSource>();
+        
 
         PlayerLife.InCharacterDied -= TriggerDead;
 
@@ -101,7 +104,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         PlayParticlesSlash();
 
         //Play Hit Audio
-        audio.Play("playerHit");
+        mySoundSystem.Action();
         //  ***Debug.Log(DirectionSlash);
     }
 
