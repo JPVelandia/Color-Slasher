@@ -29,6 +29,10 @@ public class PlayerLife : Character, IObserverColor
         base.TakeDamage(damaged);
         InRefreshDamage(health, maxHealth);
     }
+    public void Heal(int healing)
+    {
+        health = Mathf.Clamp(health + healing, 0, maxHealth);
+    }
 
     protected override void TriggerIsDead()
     {
@@ -47,11 +51,7 @@ public class PlayerLife : Character, IObserverColor
         switch (colorMech)
         {
             case ColorMech.green:
-                ActivateGreenPower();
-                break;
-
-            case ColorMech.red:
-                ActivateRedPower();
+                ActivateGreenPower(30);
                 break;
 
             case ColorMech.black:
@@ -64,13 +64,10 @@ public class PlayerLife : Character, IObserverColor
         }
     }
 
-    void ActivateGreenPower()
+    void ActivateGreenPower(int healing)
     {
-
-    }
-    void ActivateRedPower()
-    {
-
+        Heal(healing);
+        InRefreshDamage(health, maxHealth);
     }
     void DeactivatePower()
     {

@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     [SerializeField] bool onFloor, falling, doubleSwipe;
 
     Rigidbody2D rb;
+    CircleCollider2D circleCollider;
     Vector3 startPos, finalPos;
     ParticleSystem particleSlash;
 
@@ -30,15 +31,18 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
         particleSlash = GetComponentInChildren<ParticleSystem>();
 
         DirectionSlash = Vector2.zero;
 
         IsDead = false;
-        IsGrounded = true;
-        DoubleSwipe = false;
         IsStill = false;
+        DoubleSwipe = false;
+        circleCollider.enabled = false;
+
         IsFalling = true;
+        IsGrounded = true;
 
         mySource = gameObject.GetComponent<AudioSource>();
         mySoundSystem = gameObject.GetComponent<UISoundSystem>();
@@ -46,6 +50,8 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         PlayerLife.InCharacterDied -= TriggerDead;
 
         PlayerLife.InCharacterDied += TriggerDead;
+
+        DeactivatePower();
     }
 
     void Update()
@@ -187,6 +193,10 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
                 ActivateBluePower();
                 break;
 
+            case ColorMech.red:
+                Invoke("ActivateRedPower", 2f);
+                break;
+
             case ColorMech.yellow:
                 ActivateYellowPower();
                 break;
@@ -203,12 +213,17 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     }
     public void ActivateYellowPower()
     {
-        forceSlash = 20;
+        forceSlash = 40;
+    }
+    void ActivateRedPower()
+    {
+        circleCollider.enabled = true;
     }
 
     public void DeactivatePower()
     {
         DoubleSwipe = false;
         forceSlash = 15;
+        circleCollider.enabled = false;
     }
 }
