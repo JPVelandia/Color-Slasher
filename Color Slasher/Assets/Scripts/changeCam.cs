@@ -8,11 +8,16 @@ public class changeCam : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (gameObject.tag == "ChangeBig")
         {
             cam2.SetActive(true);
             cam1.SetActive(false);
+        }
 
+        if (gameObject.tag == "ChangePersonal")
+        {
+            cam1.SetActive(true);
+            cam2.SetActive(false);
         }
     }
 }

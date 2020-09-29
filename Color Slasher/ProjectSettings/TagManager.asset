@@ -10,6 +10,8 @@ TagManager:
   - Button
   - TurnOn
   - Master
+  - ChangeBig
+  - ChangePersonal
   layers:
   - Default
   - TransparentFX
