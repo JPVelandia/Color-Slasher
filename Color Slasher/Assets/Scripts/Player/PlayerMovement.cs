@@ -187,6 +187,10 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
                 ActivateBluePower();
                 break;
 
+            case ColorMech.red:
+                ActivateRedPower();
+                break;
+
             case ColorMech.yellow:
                 ActivateYellowPower();
                 break;
@@ -203,7 +207,11 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     }
     public void ActivateYellowPower()
     {
-        forceSlash = 20;
+        forceSlash = 40;
+    }
+    void ActivateRedPower()
+    {
+
     }
 
     public void DeactivatePower()
