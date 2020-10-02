@@ -12,4 +12,13 @@ public class GreenPlatform : Platform
     {
         sr.color = Color.green;
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.name = "Floor";
+            gameObject.SetActive(false);    
+        }
+    }
 }
