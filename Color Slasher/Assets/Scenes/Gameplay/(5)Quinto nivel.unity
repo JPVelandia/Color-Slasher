@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 37062824}
   - component: {fileID: 37062823}
   - component: {fileID: 37062825}
+  - component: {fileID: 37062826}
   m_Layer: 0
   m_Name: Grid2
   m_TagString: Untagged
@@ -148,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37062821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.03, y: -5.03, z: 0.28300476}
+  m_LocalPosition: {x: -6.03, y: -5.07, z: 0.28300476}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 497661244}
@@ -344,6 +345,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &37062826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37062821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0776c701371ac6146877d8219d0aff74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &44262610
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +863,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 497661244}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &186394624
 MonoBehaviour:
@@ -2246,6 +2259,7 @@ GameObject:
   - component: {fileID: 258294139}
   - component: {fileID: 258294138}
   - component: {fileID: 258294137}
+  - component: {fileID: 258294141}
   m_Layer: 0
   m_Name: Green contact (1)
   m_TagString: Contact
@@ -2265,7 +2279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 497661244}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &258294137
 MonoBehaviour:
@@ -2448,6 +2462,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &258294141
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258294135}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -5.503622, y: -20.000057}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0113125, y: 1.9999847}
+  m_EdgeRadius: 0
 --- !u!1001 &317703075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2975,8 +3015,8 @@ Transform:
   m_Children:
   - {fileID: 37062822}
   - {fileID: 1764319833}
-  - {fileID: 186394623}
   - {fileID: 258294136}
+  - {fileID: 186394623}
   - {fileID: 1346759495}
   - {fileID: 1090150791}
   - {fileID: 676009070}
@@ -12554,8 +12594,6 @@ GameObject:
   - component: {fileID: 1764319835}
   - component: {fileID: 1764319834}
   - component: {fileID: 1764319839}
-  - component: {fileID: 1764319838}
-  - component: {fileID: 1764319840}
   m_Layer: 0
   m_Name: Green contact
   m_TagString: Contact
@@ -12813,32 +12851,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &1764319838
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764319832}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.0198417, y: -5.4987803}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.868289, y: 0.93839264}
-  m_EdgeRadius: 0
 --- !u!61 &1764319839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12864,32 +12876,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.98133683, y: 2.9641175}
-  m_EdgeRadius: 0
---- !u!61 &1764319840
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764319832}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -5.489235, y: -20.021063}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.97024345, y: 1.9660912}
   m_EdgeRadius: 0
 --- !u!1 &1774811484
 GameObject:
@@ -13477,7 +13463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1972142641
 Transform:
   m_ObjectHideFlags: 0
