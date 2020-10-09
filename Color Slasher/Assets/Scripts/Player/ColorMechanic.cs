@@ -31,6 +31,8 @@ public class ColorMechanic : MonoBehaviour, ISubject
     }
     #endregion
 
+
+
     static SpriteRenderer sr;
     ColorMech cm;
     PlayerMovement playerMovement;
@@ -39,12 +41,20 @@ public class ColorMechanic : MonoBehaviour, ISubject
     LifeBar swordsHUD;
     PlayerTutorial playerTutorial;
 
+    /*new*/
+    [SerializeField] GameObject ParticlesGreen;
+    [SerializeField] GameObject ParticlesYellow;
+    [SerializeField] GameObject ParticlesRed;
+    [SerializeField] GameObject ParticlesBlue;
+    private bool IsActive = false;
+
     //  Get the references necessary to this code.
     void SetUp()
     {
         sr = GetComponent<SpriteRenderer>();
         playerMovement = GetComponent<PlayerMovement>();
         playerLife = GetComponent<PlayerLife>();
+        
 
         try
         {
@@ -97,21 +107,53 @@ public class ColorMechanic : MonoBehaviour, ISubject
     {
         sr.color = Color.blue;
         cm = ColorMech.blue;
+
+        /*new*/
+        if (IsActive == false)
+        {
+            ParticlesBlue.SetActive(true);
+            IsActive = true;
+            StartCoroutine("TurnOff");            
+        }
     }
     void GreenPower()
     {
         sr.color = Color.green;
         cm = ColorMech.green;
+
+        /*new*/
+        if (IsActive == false)
+        {
+            ParticlesGreen.SetActive(true);
+            IsActive = true;
+            StartCoroutine("TurnOff");
+        }
     }
     void RedPower()
     {
         sr.color = Color.red;
         cm = ColorMech.red;
+
+        /*new*/
+        if (IsActive == false)
+        {
+            ParticlesRed.SetActive(true);
+            IsActive = true;
+            StartCoroutine("TurnOff");
+        }
     }
     void YellowPower()
     {
         sr.color = Color.yellow;
         cm = ColorMech.yellow;
+
+        /*new*/
+        if (IsActive == false)
+        {
+            ParticlesYellow.SetActive(true);
+            IsActive = true;
+            StartCoroutine("TurnOff");
+        }
     }
     void BlackPower()
     {
@@ -132,5 +174,19 @@ public class ColorMechanic : MonoBehaviour, ISubject
 
         heartsHUD.ColorMechUpdate(cm);
         swordsHUD.ColorMechUpdate(cm);
+    }
+
+    /*new*/
+    IEnumerator TurnOff()
+    {
+        if (IsActive == true)
+        {
+            yield return new WaitForSeconds(1f);
+            ParticlesGreen.SetActive(false);
+            ParticlesBlue.SetActive(false);
+            ParticlesRed.SetActive(false);
+            ParticlesYellow.SetActive(false);
+            IsActive = false;
+        }
     }
 }

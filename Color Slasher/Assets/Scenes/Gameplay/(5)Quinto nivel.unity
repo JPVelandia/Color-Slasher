@@ -16292,6 +16292,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 216631107829075327, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 472468480623085379, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16352,6 +16357,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '----- Player ----- '
       objectReference: {fileID: 0}
+    - target: {fileID: 1343350196648141624, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1586217935743227361, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Enabled
@@ -16382,6 +16392,46 @@ PrefabInstance:
       propertyPath: ContactPlatform2
       value: 
       objectReference: {fileID: 1363456287}
+    - target: {fileID: 4592752567786147752, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150725951655817288, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803525656333547022, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826451076592738333, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564604607672038483, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: Particles
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804667793753624380, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184532395194539838, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560178061268551362, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
