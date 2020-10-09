@@ -8,11 +8,12 @@ public class Dissolver : MonoBehaviour
     [SerializeField] float DissolveSpeed;
     private bool IsDissolving;
     private Material mat;
-
+    [SerializeField] Animator anim;
 
     void Start()
     {
         mat = GetComponent<SpriteRenderer>().material;
+        anim.SetBool("Test", false);
     }
 
 
@@ -21,10 +22,12 @@ public class Dissolver : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.A))
         {
             IsDissolving = true;
+            anim.SetBool("Test", true);
         }
         if(Input.GetKeyDown(KeyCode.S))
         {
             IsDissolving = false;
+            anim.SetBool("Test", false);
         }
         if (IsDissolving ==  true)
         {
