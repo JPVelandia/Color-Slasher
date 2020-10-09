@@ -2098,7 +2098,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.3849108
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 113070960275289920, guid: a7c1cdbc413a8324faf370d79e72a41b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7c1cdbc413a8324faf370d79e72a41b, type: 3}
 --- !u!1001 &708621932
 PrefabInstance:
@@ -2193,7 +2194,7 @@ PrefabInstance:
     - target: {fileID: 5189103840644905052, guid: a7c1cdbc413a8324faf370d79e72a41b,
         type: 3}
       propertyPath: m_Name
-      value: Green Platform
+      value: Green Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5189103840644905052, guid: a7c1cdbc413a8324faf370d79e72a41b,
         type: 3}
@@ -2275,7 +2276,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 113070960275289920, guid: a7c1cdbc413a8324faf370d79e72a41b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7c1cdbc413a8324faf370d79e72a41b, type: 3}
 --- !u!4 &726035771 stripped
 Transform:
