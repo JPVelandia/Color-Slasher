@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     //  Debug variables. Code works with Properties.
     [SerializeField] bool onFloor, falling, doubleSwipe;
 
+    Animator anim;
     Rigidbody2D rb;
     CircleCollider2D circleCollider;
     Vector3 startPos, finalPos;
@@ -30,9 +31,11 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
 
     void Awake()
     {
+        //anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
         particleSlash = GetComponentInChildren<ParticleSystem>();
+        anim = GetComponent<Animator>();
 
         DirectionSlash = Vector2.zero;
 
@@ -59,6 +62,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         //  Gets the position where the screen is first touched.
         if (Input.GetButtonDown("Fire1"))
         {
+            anim.SetTrigger("Attacking");
             startPos = Input.mousePosition;
         }
 
@@ -69,7 +73,6 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         {
             //  Gets the position where the screen is last touched.
             finalPos = Input.mousePosition;
-
             //  Calculate the distance between x and y components, then traduces it to values from 0 to 1. 
             Vector3 v = Vector3.Normalize(finalPos - startPos);
             //  Crops the Vector3 to Vector2
@@ -96,7 +99,6 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     {
         //  Starts the slash without any other force.
         rb.velocity = Vector2.zero;
-
         if (!IsGrounded) InDeactivatePower("Floor");
         IsGrounded = false;
         IsStill = false;
@@ -107,7 +109,6 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
 
         //  Activate particle system.
         PlayParticlesSlash();
-
         //Play Hit Audio
         mySoundSystem.Action();
         //  ***Debug.Log(DirectionSlash);
@@ -144,7 +145,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         rb.velocity = Vector2.zero;
         IsGrounded = true;
         IsFalling = false;
-
+        anim.SetTrigger("Landing");
         //  Activates Grab if the character not IsStill.
         if (!IsStill) StartCoroutine(Grab());
     }
