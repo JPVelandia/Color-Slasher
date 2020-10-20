@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
 
     //  Debug variables. Code works with Properties.
     [SerializeField] bool onFloor, falling, doubleSwipe;
+    [SerializeField] Dissolver diss;
 
     Animator anim;
     Rigidbody2D rb;
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         circleCollider = GetComponent<CircleCollider2D>();
         particleSlash = GetComponentInChildren<ParticleSystem>();
         anim = GetComponent<Animator>();
+        
 
         DirectionSlash = Vector2.zero;
 
@@ -71,6 +73,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
         (IsGrounded || DoubleSwipe) &&
         !IsDead)
         {
+            diss.IsDissolving = true;
             //  Gets the position where the screen is last touched.
             finalPos = Input.mousePosition;
             //  Calculate the distance between x and y components, then traduces it to values from 0 to 1. 
@@ -131,6 +134,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        diss.IsDissolving = false;
         //  Play Collision Audio
         mySoundSystem.Action2();
 

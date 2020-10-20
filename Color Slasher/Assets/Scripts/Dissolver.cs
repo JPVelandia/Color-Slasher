@@ -4,46 +4,42 @@ using UnityEngine;
 
 public class Dissolver : MonoBehaviour
 {
-    [SerializeField] float DissolveAmount;
-    [SerializeField] float DissolveSpeed;
-    private bool IsDissolving;
+    private float DissolveAmount;
+    [SerializeField] float DissolveSpeed = 1.3f;
+    public bool IsDissolving;
     private Material mat;
-    [SerializeField] Animator anim;
 
     void Start()
     {
         mat = GetComponent<SpriteRenderer>().material;
-        anim.SetBool("Test", false);
     }
 
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        /*if(Input.GetKeyDown(KeyCode.A))
         {
             IsDissolving = true;
-            anim.SetBool("Test", true);
-        }
-        if(Input.GetKeyDown(KeyCode.S))
+        }*/
+        /*if(Input.GetKeyDown(KeyCode.S))
         {
             IsDissolving = false;
-            anim.SetBool("Test", false);
-        }
+        }*/
         if (IsDissolving ==  true)
         {
-            if(DissolveAmount > -0.2)
+            if(DissolveAmount < 1)
             {
-                DissolveAmount -= Time.deltaTime * DissolveSpeed;
+                DissolveAmount += Time.deltaTime * DissolveSpeed;
             }                      
         }
         if (!IsDissolving)
         {
-            if (DissolveAmount < 1)
+            if (DissolveAmount > 0)
             {
-                DissolveAmount += Time.deltaTime * DissolveSpeed;
+                DissolveAmount -= Time.deltaTime * DissolveSpeed;
             }
         }
 
-        mat.SetFloat("_DissolveAmount", DissolveAmount);
+        mat.SetFloat("_Level", DissolveAmount);
     }
 }
