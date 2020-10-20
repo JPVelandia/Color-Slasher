@@ -10,6 +10,7 @@ public class PlayerLife : Character, IObserverColor
     //public static event Life InRefreshLife;
     public static Action<int, int> InRefreshDamage;
     public static Action<int> InCharacterDied;
+    Animator anim;
 
     int maxHealth = 100;
 
@@ -20,6 +21,7 @@ public class PlayerLife : Character, IObserverColor
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         health = maxHealth;
         InRefreshDamage(health, maxHealth);
     }
@@ -28,6 +30,7 @@ public class PlayerLife : Character, IObserverColor
     {
         base.TakeDamage(damaged);
         InRefreshDamage(health, maxHealth);
+        anim.SetTrigger("Damaged");
     }
     public void Heal(int healing)
     {
