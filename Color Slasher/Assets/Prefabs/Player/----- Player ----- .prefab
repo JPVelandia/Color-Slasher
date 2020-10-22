@@ -19258,6 +19258,7 @@ GameObject:
   - component: {fileID: 871622189}
   - component: {fileID: 1335504298}
   - component: {fileID: 1767156670}
+  - component: {fileID: 8513174269894848049}
   m_Layer: 0
   m_Name: character
   m_TagString: Player
@@ -19308,6 +19309,7 @@ MonoBehaviour:
   onFloor: 0
   falling: 0
   doubleSwipe: 0
+  diss: {fileID: 8513174269894848049}
 --- !u!114 &4247557054899756077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19355,7 +19357,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7e105fbee96f7df46aa79efa49b1f0de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19640,6 +19642,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.8
+--- !u!114 &8513174269894848049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611570461697881156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a69310ca53627d4cb713bc1c8bd50a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DissolveSpeed: 1.3
+  IsDissolving: 0
 --- !u!1 &2820180883183333727
 GameObject:
   m_ObjectHideFlags: 0

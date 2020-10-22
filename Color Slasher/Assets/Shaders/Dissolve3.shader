@@ -1,9 +1,9 @@
-﻿Shader "Custom/Dissolve"
+﻿Shader "Unlit/Dissolve3"
 {
 	Properties
 	{
 		_Color("Color", Color) = (1,1,1,1)
-		_MainTex("Texture", 2D) = "white" {}
+		_MainTex("Albedo (RGB)", 2D) = "white" {}
 		_NoiseTexture("NoiseTex",2D) = "white"{}
 		_DissolveAmount("Dissolving", Range(0,1)) = 0
 	}
@@ -48,7 +48,7 @@
 				//multiply by 2 and then multiply the Color
 
 				float b = tex2D(_NoiseTexture, IN.uv_NoiseTexture);
-				fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
+				fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
 
 				/*if (_IsDissolving == 1)
 				{
@@ -73,7 +73,6 @@
 				o.Alpha = b;
 				o.Albedo = c.rgb;
 			}
-			ENDCG
-        }        
-    FallBack "Diffuse"
+            ENDCG
+        }
 }
