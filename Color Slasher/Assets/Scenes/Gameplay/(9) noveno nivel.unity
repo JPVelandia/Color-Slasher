@@ -1791,7 +1791,12 @@ PrefabInstance:
     - target: {fileID: 88512646389363207, guid: fef4ac6f50aff824690f7afeb0f8206a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 88512646389363207, guid: fef4ac6f50aff824690f7afeb0f8206a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3104157699067792387, guid: fef4ac6f50aff824690f7afeb0f8206a, type: 3}
@@ -1996,6 +2001,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1758428446}
     m_Modifications:
+    - target: {fileID: 201167581293507559, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: yellowpowerforce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 472468480623085379, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2111,6 +2121,11 @@ PrefabInstance:
       propertyPath: turnedOffButton
       value: 
       objectReference: {fileID: 467459228}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: wall1
+      value: 
+      objectReference: {fileID: 235152556}
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
@@ -3421,10 +3436,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187395691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fdecad1c96ce234c873cc1e519298eb, type: 3}
+  m_Script: {fileID: 11500000, guid: cb6b876c8b5dde246a844bd6a248cd70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallIndex: 1
 --- !u!19719996 &1187395693
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -4057,7 +4071,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 12.322425, y: -15.551064}
+  m_Offset: {x: 12.322425, y: -15.296806}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4068,7 +4082,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.783495, y: 1.8854866}
+  m_Size: {x: 23.783495, y: 2.394002}
   m_EdgeRadius: 0
 --- !u!61 &1401311344
 BoxCollider2D:
@@ -4109,7 +4123,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.6394639, y: -10.814317}
+  m_Offset: {x: -1.5518804, y: -10.404191}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4120,7 +4134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0759325, y: 2.050272}
+  m_Size: {x: 4.2510996, y: 2.8705235}
   m_EdgeRadius: 0
 --- !u!61 &1401311346
 BoxCollider2D:

@@ -430,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 88512646389363207, guid: fef4ac6f50aff824690f7afeb0f8206a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3104157699067792387, guid: fef4ac6f50aff824690f7afeb0f8206a, type: 3}
@@ -13954,7 +13954,7 @@ GameObject:
   - component: {fileID: 258294137}
   m_Layer: 0
   m_Name: Red Platforms (1)
-  m_TagString: Contact
+  m_TagString: Wall1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13982,10 +13982,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 258294135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d3689fcd78ed94388ecbd65f64cf66, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ccc5bfbd39349647b59683ac7c2735d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallIndex: 1
 --- !u!19719996 &258294138
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -14405,6 +14404,9 @@ MonoBehaviour:
   turnedOffButton: {fileID: 0}
   collisionWall: {fileID: 0}
   toTurnOn: {fileID: 0}
+  wall1: {fileID: 0}
+  wall2: {fileID: 0}
+  wall3: {fileID: 0}
 --- !u!4 &483498034
 Transform:
   m_ObjectHideFlags: 0
@@ -17256,6 +17258,11 @@ PrefabInstance:
       propertyPath: triggerWall
       value: 
       objectReference: {fileID: 1323321037}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: wall1
+      value: 
+      objectReference: {fileID: 2140316970}
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
