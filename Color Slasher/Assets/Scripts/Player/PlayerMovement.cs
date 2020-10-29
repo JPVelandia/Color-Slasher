@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
 
     Animator anim;
     Rigidbody2D rb;
-    CircleCollider2D circleCollider;
+    //CircleCollider2D circleCollider;
     Vector3 startPos, finalPos;
     ParticleSystem particleSlash;
 
@@ -34,17 +34,18 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     {
         //anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        circleCollider = GetComponent<CircleCollider2D>();
+        //circleCollider = GetComponent<CircleCollider2D>();
         particleSlash = GetComponentInChildren<ParticleSystem>();
         anim = GetComponent<Animator>();
-        
+
+        //Debug.Log($"circleCollider state: {circleCollider}");
 
         DirectionSlash = Vector2.zero;
 
         IsDead = false;
         IsStill = false;
         DoubleSwipe = false;
-        circleCollider.enabled = false;
+        //circleCollider.enabled = false;
 
         IsFalling = true;
         IsGrounded = true;
@@ -222,13 +223,26 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     }
     void ActivateRedPower()
     {
-        circleCollider.enabled = true;
+        //circleCollider.enabled = true;
     }
 
     public void DeactivatePower()
     {
         DoubleSwipe = false;
         forceSlash = 15;
-        circleCollider.enabled = false;
+        Debug.Log("before try");
+       // try
+      //{
+      //      circleCollider.enabled = false;
+        //    Debug.Log("try");
+        //}
+       // catch
+        //{
+          //  circleCollider.gameObject.AddComponent<CircleCollider2D>();
+            //circleCollider = GetComponent<CircleCollider2D>();
+           // circleCollider.enabled = false;
+           // Debug.Log("catch");
+       // }
+       // Debug.Log("after try");
     }
 }
