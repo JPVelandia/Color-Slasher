@@ -620,7 +620,7 @@ PrefabInstance:
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
@@ -674,6 +674,18 @@ Transform:
   m_Father: {fileID: 1014109200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402647372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1755007834075081470, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1612254716}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &481621056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 88512646389363207, guid: fef4ac6f50aff824690f7afeb0f8206a,
@@ -743,6 +755,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13637686, y: 5.503316}
   m_EdgeRadius: 0
+--- !u!114 &664829885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2982382223624160685, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1612254716}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &667603327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,18 +1565,13 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &876030940 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5999594331165896690, guid: d07b453b2d227874d9889917c3545917,
-    type: 3}
-  m_PrefabInstance: {fileID: 899412400}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &886373515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
     type: 3}
   m_PrefabInstance: {fileID: 261225068}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &899412400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1649,6 +1668,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d07b453b2d227874d9889917c3545917, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &905457926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6667085274387897274, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
@@ -16107,7 +16128,7 @@ PrefabInstance:
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
@@ -17679,7 +17700,7 @@ PrefabInstance:
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
@@ -17737,6 +17758,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1014109200}
     m_Modifications:
+    - target: {fileID: 3899810353260505875, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899810353260505875, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4283511449712409991, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -17786,6 +17817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590703624718698064, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -9.599983
       objectReference: {fileID: 0}
     - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
@@ -17989,7 +18025,7 @@ PrefabInstance:
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6667085274968130092, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a,
         type: 3}
@@ -18576,6 +18612,29 @@ PrefabInstance:
       propertyPath: ContactPlatform2
       value: 
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: collisionWall
+      value: 
+      objectReference: {fileID: 481621056}
+    - target: {fileID: 3096466755693095469, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: wall1
+      value: 
+      objectReference: {fileID: 481621056}
+    - target: {fileID: 6228266584125345653, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: number
+      value: 
+      objectReference: {fileID: 402647372}
+    - target: {fileID: 6228266584125345653, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 664829885}
+>>>>>>> Stashed changes
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
@@ -18653,7 +18712,6 @@ Transform:
   m_LocalPosition: {x: 0, y: -15.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 876030940}
   - {fileID: 1888074946}
   - {fileID: 886373515}
   - {fileID: 1301363426}

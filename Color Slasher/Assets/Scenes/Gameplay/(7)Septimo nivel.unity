@@ -2956,6 +2956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c3b14131acab3c4dae0ee7136813841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whiteplat: {fileID: 0}
 --- !u!19719996 &786132391
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -3177,6 +3178,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6590703624718698064, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.0999756
+      objectReference: {fileID: 0}
     - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3310,6 +3316,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 788320878}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &788320880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2982382223624160685, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 788320878}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &788320881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1755007834075081470, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 788320878}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &809790478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3412,6 +3442,16 @@ PrefabInstance:
       propertyPath: ContactWall2
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6228266584125345653, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: number
+      value: 
+      objectReference: {fileID: 788320881}
+    - target: {fileID: 6228266584125345653, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 788320880}
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class PlayerLife : Character, IObserverColor
 {
     //  Jose was here
@@ -11,6 +12,8 @@ public class PlayerLife : Character, IObserverColor
     public static Action<int, int> InRefreshDamage;
     public static Action<int> InCharacterDied;
     Animator anim;
+
+    [SerializeField] Score score;
 
     int maxHealth = 100;
 
@@ -31,6 +34,11 @@ public class PlayerLife : Character, IObserverColor
         base.TakeDamage(damaged);
         InRefreshDamage(health, maxHealth);
         anim.SetTrigger("Damaged");
+
+        if (score.points > 0)
+        {
+            score.points = score.points - 100;
+        }
     }
     public void Heal(int healing)
     {
