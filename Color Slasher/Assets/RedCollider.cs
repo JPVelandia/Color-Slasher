@@ -18,7 +18,7 @@ public class RedCollider : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Power();
     }
@@ -30,9 +30,10 @@ public class RedCollider : MonoBehaviour
         isInside = redCollision != null;
         if (isInside == true)
         {
-            Character elpepe = redCollision.GetComponent<Character>();
-            if (elpepe != null)
+            Character elpepe = redCollision.gameObject.GetComponent<Character>();
+            if (elpepe )
             {
+                UnityEngine.Debug.LogWarning("Choca xd");
                 elpepe.TakeDamage(10000);
             }
         }
