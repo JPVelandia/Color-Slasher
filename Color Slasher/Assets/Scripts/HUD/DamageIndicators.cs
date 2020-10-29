@@ -24,8 +24,9 @@ public class DamageIndicators : MonoBehaviour
 
     static void TriggerToCharacter(int i, int f)
     {
+        PlayerLife playerLife = ColorMechanic.Instance.gameObject.GetComponent<PlayerLife>();
         Debug.Log("Awake " + FirstTime);
-        if(!FirstTime) indicators[1].GetComponent<Animator>().SetTrigger("Play");
+        if(playerLife.Health != 100) indicators[1].GetComponent<Animator>().SetTrigger("Play");
         FirstTime = false;
     }
 

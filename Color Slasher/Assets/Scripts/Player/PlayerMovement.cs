@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     //  Force applied to the slash movement | 
     //  Friction applied to the slash (contrary to DirectionSwipe) | 
     //  Seconds the character remains without falling when touches a platform.
-    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f;
+    [SerializeField] float forceSlash = 10f, frictionSlash = 1f, secondsGrab = 3f,yellowpowerforce = 30f;
     [SerializeField] bool canSwipe;
     public int damage = 3;
 
@@ -218,7 +218,7 @@ public class PlayerMovement : MonoBehaviour, IObserverColor
     }
     public void ActivateYellowPower()
     {
-        forceSlash = 40;
+        forceSlash = yellowpowerforce;
     }
     void ActivateRedPower()
     {
