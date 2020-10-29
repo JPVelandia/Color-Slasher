@@ -704,18 +704,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.34391, y: 2.12}
   m_EdgeRadius: 0
---- !u!114 &123761304 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2982382223624160685, guid: 88da46c774c88f5418a856fcb4a86a8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 220730712}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &186394622
 GameObject:
   m_ObjectHideFlags: 0
@@ -13664,16 +13652,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3899810353260505875, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3899810353260505875, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5189918095386528436, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -13698,11 +13676,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6590703624718698064, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
@@ -16231,18 +16204,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f363056b2173cb4684f57cebc01bd22, type: 3}
---- !u!114 &1472363040 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1755007834075081470, guid: 88da46c774c88f5418a856fcb4a86a8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 220730712}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1600707243
 GameObject:
   m_ObjectHideFlags: 0
@@ -17298,6 +17259,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1323321037}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 =======
@@ -17321,6 +17283,8 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> master
+=======
+>>>>>>> parent of 6572f21... Point system
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
