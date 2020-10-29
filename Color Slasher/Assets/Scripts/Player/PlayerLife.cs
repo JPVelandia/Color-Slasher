@@ -17,6 +17,8 @@ public class PlayerLife : Character, IObserverColor
 
     int maxHealth = 100;
 
+    public int Health { get => health; }
+
     new void Awake()
     {
         base.Awake();
