@@ -20,7 +20,6 @@ public class Lips : EAttackDirect
         {
             PlayerMovement pM = other.gameObject.GetComponent<PlayerMovement>();
             TakeDamage(pM.damage);
-            Debug.Log("Entra");           
         }
     }
 

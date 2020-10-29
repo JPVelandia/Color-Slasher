@@ -12,9 +12,6 @@ TagManager:
   - Master
   - ChangeBig
   - ChangePersonal
-  - Wall1
-  - Wall2
-  - Wall3
   layers:
   - Default
   - TransparentFX
@@ -25,7 +22,7 @@ TagManager:
   - 
   - 
   - Obstacle
-  - Enemie
+  - 
   - 
   - 
   - 

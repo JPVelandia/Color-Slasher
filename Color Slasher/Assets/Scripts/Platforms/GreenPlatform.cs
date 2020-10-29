@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GreenPlatform : Platform
 {
-    [SerializeField] GameObject whiteplat;
     protected override void AssignName()
     {
         gameObject.name = "Green Platform";
@@ -14,13 +13,12 @@ public class GreenPlatform : Platform
         sr.color = Color.green;
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            //gameObject.name = "Floor";
-            gameObject.SetActive(false);
-            whiteplat.SetActive(true);
+            gameObject.name = "Floor";
+            gameObject.SetActive(false);    
         }
     }
 }

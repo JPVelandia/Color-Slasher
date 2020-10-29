@@ -29,6 +29,7 @@ public class Pause : MonoBehaviour
 
     public void GoMenu()
     {
+        Debug.Log("Click");
         SceneManager.LoadScene("Home");
     }
 
@@ -63,7 +64,7 @@ public class Pause : MonoBehaviour
         TrunOnAssets();
 
         assetS[1].SetActive(false);
-        assetS[3].SetActive(true);
+        assetS[3].SetActive(false);
         assetS[6].SetActive(true);
 
         assetS[6].GetComponent<TextMeshProUGUI>().text = "You made them sashimi!";
@@ -75,7 +76,6 @@ public class Pause : MonoBehaviour
 
         assetS[1].SetActive(false);
         assetS[3].SetActive(false);
-        assetS[7].SetActive(true);
         assetS[6].SetActive(true);
 
         assetS[6].GetComponent<TextMeshProUGUI>().text = "Oh no!\nYou were slashed!";
@@ -91,10 +91,5 @@ public class Pause : MonoBehaviour
     public void Restart()
     {
         restart.RestartActiveScene();
-    }
-
-    public void ToBegin()
-    {
-        SceneManager.LoadScene(0);
     }
 }
