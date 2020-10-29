@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Music : MonoBehaviour
 {
-    UISoundSystem mySoundSystem;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
     void Awake()
     {
-        mySoundSystem = gameObject.GetComponent<UISoundSystem>();
-        Play();
         DontDestroyOnLoad(this.gameObject);
-        Debug.LogWarning("Se reproduce");
-    }
-    void Play()
-    {
-        mySoundSystem.Action5();
     }
 }

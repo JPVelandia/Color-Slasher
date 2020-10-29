@@ -7,21 +7,18 @@ public abstract class Character : MonoBehaviour
 {
     public static Action InGetHurt;
 
-    UISoundSystem mySoundSystem;
     public int health;
     protected bool IsDead{get;set;}
 
     protected virtual void Awake()
     {
         IsDead = false;
-        mySoundSystem = gameObject.GetComponent<UISoundSystem>();
     }
 
     protected virtual void TriggerIsDead()
     {
         IsDead = true;
         gameObject.SetActive(false);
-        mySoundSystem.Action4();
     }
 
     public virtual void TakeDamage(int damaged)
