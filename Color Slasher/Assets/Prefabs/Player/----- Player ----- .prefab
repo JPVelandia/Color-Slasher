@@ -1,5 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1399799786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1399799787}
+  - component: {fileID: 1399799789}
+  - component: {fileID: 1399799788}
+  m_Layer: 0
+  m_Name: Red Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1399799787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399799786}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.387906, y: 4.1426616, z: 2.6798782}
+  m_LocalScale: {x: -0.6765868, y: 0.80183554, z: 1}
+  m_Children: []
+  m_Father: {fileID: 472468479449313128}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1399799789
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399799786}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.55, y: -5.42}
+  serializedVersion: 2
+  m_Radius: 2.73
+--- !u!114 &1399799788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399799786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0096ab6dc9f56014c956fa954338fd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  playerCheckPos: {fileID: 472468479449313128}
+  isInside: 0
+  radius: 2.73
 --- !u!1 &472468480623085380
 GameObject:
   m_ObjectHideFlags: 0
@@ -19286,6 +19352,7 @@ Transform:
   - {fileID: 216631107829075327}
   - {fileID: 5803525656333547022}
   - {fileID: 8560178061268551362}
+  - {fileID: 1399799787}
   m_Father: {fileID: 472468480623085379}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19304,6 +19371,7 @@ MonoBehaviour:
   forceSlash: 15
   frictionSlash: 0
   secondsGrab: 2
+  yellowpowerforce: 30
   canSwipe: 0
   damage: 1
   onFloor: 0
@@ -19429,6 +19497,9 @@ MonoBehaviour:
   turnedOffButton: {fileID: 0}
   collisionWall: {fileID: 0}
   toTurnOn: {fileID: 0}
+  wall1: {fileID: 0}
+  wall2: {fileID: 0}
+  wall3: {fileID: 0}
 --- !u!95 &306782738549535647
 Animator:
   serializedVersion: 3
@@ -19512,7 +19583,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.049183685, y: 0.008744469}
-  m_Size: {x: 0.3102653, y: 0.5981515}
+  m_Size: {x: 0.3102653, y: 0.59815127}
   m_Direction: 0
 --- !u!114 &871622189
 MonoBehaviour:

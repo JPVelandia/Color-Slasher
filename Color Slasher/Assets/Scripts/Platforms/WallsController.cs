@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class WallsController : MonoBehaviour
 {
-    Transform[] walls;
+    static Transform[] walls;
 
     private void Awake()
     {
         walls = GetComponentsInChildren<Transform>();
 
+        Platform.OnSwitchTouch -= TurnOffWall;
         Platform.OnSwitchTouch += TurnOffWall;
     }
 

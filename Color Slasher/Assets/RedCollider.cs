@@ -18,16 +18,23 @@ public class RedCollider : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        Power();
     }
 
 
-    void Power()
+    void Power()    
     {
-        isInside = Physics2D.OverlapCircle(playerCheckPos.position,radius,groundLayer);
-        
-        UnityEngine.Debug.Log("Enemigo!");
+        Collider2D redCollision = Physics2D.OverlapCircle(playerCheckPos.position, radius, groundLayer);
+        isInside = redCollision != null;
+        if (isInside == true)
+        {
+            Character elpepe = redCollision.GetComponent<Character>();
+            if (elpepe != null)
+            {
+                elpepe.TakeDamage(10000);
+            }
+        }
     }
 }
