@@ -7,6 +7,6 @@ public class Tenth : MonoBehaviour
 {
     public void EleventhScene()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(12);
     }
 }

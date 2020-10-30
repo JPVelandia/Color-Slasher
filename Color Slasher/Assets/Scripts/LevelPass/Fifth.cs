@@ -7,6 +7,6 @@ public class Fifth : MonoBehaviour
 {
     public void SixthScene()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(7);
     }
 }

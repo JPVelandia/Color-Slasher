@@ -6,7 +6,7 @@ using TMPro;
 public class TutorialFunction : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI TutText;
-    [SerializeField] GameObject TutStuff;
+    [SerializeField] GameObject TutStuff, firstTitle;
 
     private void Awake()
     {
@@ -15,9 +15,11 @@ public class TutorialFunction : MonoBehaviour
     private void Start()
     {
         TutStuff.SetActive(false);
+        firstTitle.SetActive(true);
+        Time.timeScale = 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("BlueTut"))
         {
@@ -48,6 +50,7 @@ public class TutorialFunction : MonoBehaviour
     public void ClickOff()
     {
         TutStuff.SetActive(false);
+        firstTitle.SetActive(false);
         Time.timeScale = 1;
     }
 }
