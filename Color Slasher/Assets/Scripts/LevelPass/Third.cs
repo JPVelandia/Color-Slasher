@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Third : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void FourthScene()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(4);
-        }
+        SceneManager.LoadScene(4);
     }
 }

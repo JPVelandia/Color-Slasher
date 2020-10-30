@@ -1133,6 +1133,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a9ecc742bf104aa3bc4b1ab3cf27a, type: 3}
+--- !u!1 &381273497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6852536951119556313, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 437540840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &381273498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381273497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe5c75a73c0d704d8a3fb231978f4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393923704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,145 +1359,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1686517721}
     m_Modifications:
-    - target: {fileID: 1018772336323755009, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    - target: {fileID: 516945749872637316, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1894755210593085211, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    - target: {fileID: 516945749872637316, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2132943370867833277, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    - target: {fileID: 5791576517234208170, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283511449712409991, guid: 88da46c774c88f5418a856fcb4a86a8c,
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 381273498}
+    - target: {fileID: 5791576517234208170, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283511449712409991, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283511449712409991, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283511449712409991, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283511449712409991, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189918095386528436, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189918095386528436, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189918095386528436, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189918095386528436, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189918095386528436, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5308986218026592425, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950404773530, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950404773530, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950404773530, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950404773530, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950779522221, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950779522221, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950779522221, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852536950779522221, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SecondScene
       objectReference: {fileID: 0}
     - target: {fileID: 8339382171214890376, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
       propertyPath: m_Name
       value: ----- UI -----
-      objectReference: {fileID: 0}
-    - target: {fileID: 8339382171214890376, guid: 88da46c774c88f5418a856fcb4a86a8c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8339382171214890381, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
@@ -62002,7 +61905,7 @@ GameObject:
   - component: {fileID: 1844287448}
   - component: {fileID: 1844287447}
   - component: {fileID: 1844287446}
-  - component: {fileID: 1844287445}
+  - component: {fileID: 1844287449}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -62024,18 +61927,6 @@ Transform:
   m_Father: {fileID: 1686517721}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1844287445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844287443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe5c75a73c0d704d8a3fb231978f4d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1844287446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62055,7 +61946,7 @@ MonoBehaviour:
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -62199,6 +62090,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1844287449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844287443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7203331ff0ccc6d46a1007cf762bc9ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1851161226
 PrefabInstance:
   m_ObjectHideFlags: 0

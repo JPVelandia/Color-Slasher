@@ -2800,6 +2800,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 516945749872637316, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 516945749872637316, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5189918095386528436, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2824,6 +2834,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791576517234208170, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 466057418}
+    - target: {fileID: 5791576517234208170, guid: 88da46c774c88f5418a856fcb4a86a8c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NinthScene
       objectReference: {fileID: 0}
     - target: {fileID: 6852536949201419965, guid: 88da46c774c88f5418a856fcb4a86a8c,
         type: 3}
@@ -2974,6 +2994,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &466057417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6852536951119556313, guid: 88da46c774c88f5418a856fcb4a86a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 466057414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &466057418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466057417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52d507a1b0a47a43a7ea761a30addc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &470568549
@@ -14726,7 +14764,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578540823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52d507a1b0a47a43a7ea761a30addc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7203331ff0ccc6d46a1007cf762bc9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1578540825
