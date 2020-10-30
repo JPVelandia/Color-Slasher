@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class Score : MonoBehaviour
 {
     //[SerializeField] Score score;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] TextMeshProUGUI number;
+    [SerializeField] AudioSource Up;
     public int points;
 
     void Update()
@@ -19,7 +21,7 @@ public class Score : MonoBehaviour
             text.text = "D-o your best";
         }
         if (points == 100)
-        {
+        {           
             text.text = "C-ome on!";
         }
         if (points == 200)
@@ -42,6 +44,7 @@ public class Score : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             points = points + 100;
+            Up.Play();
             number.text = "" + points.ToString();
         }
     }
