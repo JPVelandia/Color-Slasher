@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Ninth : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void TenthScene()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(10);
-        }
+        SceneManager.LoadScene(10);
     }
 }

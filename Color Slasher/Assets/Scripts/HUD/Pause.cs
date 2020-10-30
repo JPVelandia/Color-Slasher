@@ -24,7 +24,7 @@ public class Pause : MonoBehaviour
         restart = new Restart();
 
         assetS = assets;
-        TrunOffAssets();
+        TurnOffAssets();
     }
 
     public void GoMenu()
@@ -32,7 +32,7 @@ public class Pause : MonoBehaviour
         SceneManager.LoadScene("Home");
     }
 
-    public void TrunOnAssets()
+    public void TurnOnAssets()
     {
         foreach (GameObject obj in assetS)
         {
@@ -41,11 +41,13 @@ public class Pause : MonoBehaviour
 
         assetS[5].SetActive(false);
         assetS[6].SetActive(false);
+        assetS[7].SetActive(false);
+        assetS[8].SetActive(false);
 
         Time.timeScale = 0;
     }
 
-    public void TrunOffAssets()
+    public void TurnOffAssets()
     {
         foreach (GameObject obj in assetS)
         {
@@ -54,16 +56,17 @@ public class Pause : MonoBehaviour
 
         assetS[5].SetActive(true);
         assetS[6].SetActive(false);
+        assetS[8].SetActive(false);
 
         Time.timeScale = 1;
     }
 
     public void Win()
     {
-        TrunOnAssets();
+        TurnOnAssets();
 
         assetS[1].SetActive(false);
-        assetS[3].SetActive(true);
+        assetS[8].SetActive(true);
         assetS[6].SetActive(true);
 
         assetS[6].GetComponent<TextMeshProUGUI>().text = "You made them sashimi!";
@@ -71,7 +74,7 @@ public class Pause : MonoBehaviour
     }
     public void Lose(int lives)
     {
-        TrunOnAssets();
+        TurnOnAssets();
 
         assetS[1].SetActive(false);
         assetS[3].SetActive(false);
@@ -96,5 +99,10 @@ public class Pause : MonoBehaviour
     public void ToBegin()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ToContinue()
+    {
+        TurnOffAssets();
     }
 }
