@@ -5,6 +5,8 @@ using System;
 
 public class PlayerLife : Character, IObserverColor
 {
+    [SerializeField] Score score;
+
     //  Jose was here
     //public delegate void Life(int currentLife);
     //public static event Life InRefreshLife;
@@ -33,6 +35,10 @@ public class PlayerLife : Character, IObserverColor
         base.TakeDamage(damaged);
         InRefreshDamage(health, maxHealth);
         anim.SetTrigger("Damaged");
+        if (score.points > 0)
+        {
+            score.points = score.points - 100;
+        }
     }
     public void Heal(int healing)
     {
