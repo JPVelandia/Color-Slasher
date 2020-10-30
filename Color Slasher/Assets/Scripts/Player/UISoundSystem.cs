@@ -6,8 +6,8 @@ public class UISoundSystem : MonoBehaviour
 {
     AudioSource mySource;
     [SerializeField] AudioSource mainSource;
-    [SerializeField] AudioClip myClip, myClip2,myClip3;
-    AudioClip mainClip;
+    [SerializeField] AudioClip myClip, myClip2,myClip3,myClip4,myClip5;
+     AudioClip mainClip;
     void Awake()
     {
         mySource = gameObject.GetComponent<AudioSource>();
@@ -31,14 +31,14 @@ public class UISoundSystem : MonoBehaviour
     {
         mySource.PlayOneShot(myClip3);
     }
-    //public void Action4()
-    //{
-    //    mySource.PlayOneShot(myClip4);
-    //}
-    //public void Action5()
-    //{
-    //    mySource.PlayOneShot(myClip5);
-    //}
+    public void Action4()
+    {
+        mySource.PlayOneShot(myClip4);
+    }
+    public void Action5()
+    {
+        mySource.PlayOneShot(myClip5);
+    }
     public void Bang()
     {
         if (!mySource.isPlaying)

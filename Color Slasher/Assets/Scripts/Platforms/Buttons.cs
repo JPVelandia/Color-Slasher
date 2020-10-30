@@ -15,6 +15,8 @@ public class Buttons : MonoBehaviour
 
     [SerializeField] GameObject toTurnOn;
 
+    [SerializeField] GameObject wall1, wall2, wall3;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Room")
@@ -40,6 +42,18 @@ public class Buttons : MonoBehaviour
         if (other.gameObject.CompareTag("TurnOn"))
         {
             toTurnOn.SetActive(true);
+        }
+        if (other.gameObject.CompareTag("Wall1"))
+        {
+            wall1.SetActive(false);
+        }
+        if (other.gameObject.CompareTag("Wall2"))
+        {
+            wall2.SetActive(false);
+        }
+        if (other.gameObject.CompareTag("Wall3"))
+        {
+            wall3.SetActive(false);
         }
     }
 
