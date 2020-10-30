@@ -77,6 +77,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of d58668c... ????
 <<<<<<< Updated upstream
@@ -766,6 +767,9 @@ MonoBehaviour:
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5937450777592474923
+=======
+--- !u!1 &1426552111778948911
+>>>>>>> parent of 6572f21... Point system
 =======
 --- !u!1 &1426552111778948911
 >>>>>>> parent of 6572f21... Point system
