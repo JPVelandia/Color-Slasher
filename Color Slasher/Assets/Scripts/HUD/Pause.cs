@@ -78,17 +78,18 @@ public class Pause : MonoBehaviour
 
         assetS[1].SetActive(false);
         assetS[3].SetActive(false);
+        //assetS[2].SetActive(true);
         assetS[7].SetActive(true);
         assetS[6].SetActive(true);
 
         assetS[6].GetComponent<TextMeshProUGUI>().text = "Oh no!\nYou were slashed!";
         assetS[6].GetComponent<TextMeshProUGUI>().color = Color.red;
 
-        if (lives <= 0)
-        {
-            assetS[2].SetActive(false);
+        //if (lives <= 0)
+        //{
+        //    assetS[2].SetActive(false);
 
-        }
+        //}
     }
 
     public void Restart()
