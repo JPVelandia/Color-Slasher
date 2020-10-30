@@ -17728,6 +17728,11 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 220730714}
+    - target: {fileID: 6788932767355495886, guid: 4937714355d0988419c7085f76198cd6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9175197983904278026, guid: 4937714355d0988419c7085f76198cd6,
         type: 3}
       propertyPath: m_Offset.y
