@@ -1450,6 +1450,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d58668c... ????
 <<<<<<< Updated upstream
   wallIndex: 2
 =======
@@ -1457,9 +1460,12 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> master
+<<<<<<< HEAD
 =======
   wallIndex: 2
 >>>>>>> parent of 6572f21... Point system
+=======
+>>>>>>> parent of d58668c... ????
 --- !u!19719996 &109774044
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2952,6 +2958,9 @@ PrefabInstance:
       objectReference: {fileID: 109774041}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d58668c... ????
 <<<<<<< Updated upstream
 =======
 =======
@@ -2975,8 +2984,11 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> master
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 6572f21... Point system
+=======
+>>>>>>> parent of d58668c... ????
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4937714355d0988419c7085f76198cd6, type: 3}
 --- !u!1 &762098451
